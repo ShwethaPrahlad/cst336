@@ -87,6 +87,12 @@ footer {
   margin: 0 auto;
 }
 
-#contact_box{
+#contact_box {
   text-align: center;
+}
+
+#badge, #logo {
+  float: left;
+  padding-left: 160px;
+  text-align:center;
 }
