@@ -72,12 +72,12 @@ figure, footer, nav {
 }
 
 #image, #welcome_text {
-  float:left;
+  float: left;
 }
 
 footer {
   font-size: 13px;
-  clear:left;
+  clear: left;
 }
 
 #contact_form {
@@ -94,6 +94,6 @@ footer {
 #badge, #logo {
   float: left;
   padding-left: 150px;
-  text-align:center;
+  text-align: center;
 }
 
