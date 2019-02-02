@@ -1,59 +1,38 @@
 <!DOCTYPE html>
 <html>
-<!--
-
-First Website
-and comment
-in html
-(comments can span multiple lines)
-
--->
-
-<!-- This is the head -->
-<!-- All styles and javascript go inside the head -->
     <head>
         <meta charset= "utf-8"/>
         <title> Personal Website</title>
-        <!-- <link href="styles/style.css" rel="stylesheet" type="text/css">
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> -->
+        <link href="styles/style.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
     </head>
-<!-- closing head -->
-
-    <!-- This is the body -->
-    <!-- This is where we place the content of our website -->
     <body>
         <header>
-            <h1> Shwetha Prahlad</h1>
+            <h1>Shwetha Prahlad</h1>
         </header>
         <nav>
-            <hr width = "50%" />
-            <a href = "index.html">Home</a> </br>
-            <a href = "about.html">About</a> </br>
-            <a href = "contact.html">Contact</a> </br>
+            <a href = "index.html">Home</a>
+            <a href = "about.html">About</a>
+            <a href = "contact.html">Contact</a>
         </nav>
         <br/><br/>
         <main>
-            <figure>
-                <img src = "img/Shwetha_Profile.png" height= 30% width = 30% />
+            <figure id = "image">
+                <img src = "img/Shwetha_Profile.png" id = "my_image">
             </figure>
-            <div>
+            <div id = "welcome_text">
+                <br/></br>
                 <p> Thank you for visiting my professional portfolio website!</p>
                 <p> I am a graduate student studying in the MS Instructional Science and Technology (MIST) program at CSU Monterey Bay.</p>
             </div>
         </main>
-        <!-- This is the footer -->
-        <!-- The footer goes inside the body but not always -->
-        <hr width = "50%">
-        
         <footer>
-            &copy; 2019. Shwetha Prahlad - CST 336 Internet Programming <br/>
-            Disclaimer: The content on this web page is fake. It represents data only for academic purposes. <br/>
-            
-            <img src = "../../images/CSUMBLogo.png" height= 30% width = 30% />
+            <br/><br/><br/><br/><br/>
+            &copy; 2019 Shwetha Prahlad, CST 336 Internet Programming.<br/>
+            Disclaimer: The content on this web page is fictitious. It represents information only for academic purposes.<br/> <br/>
+            <div>
+               <img src = "../../images/CSUMB_Logo.png" id = "footer_image"/>
+            </div>
         </footer>
-        <!-- closing footer -->
-        
     </body>
-    <!-- closing body -->
-
 </html>

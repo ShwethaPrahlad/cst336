@@ -1,16 +1,16 @@
 html {
-  font-size: 16px; /* px means 'pixels': the base font size is now 10 pixels high  */
-  font-family: 'Open Sans', sans-serif; /* this should be the rest of the output you got from Google fonts */
-  background-color: #00539F;
-}
+  font-size: 18px; 
+  font-family: 'Open Sans', sans-serif; 
+  background-color: #364F80;
+} 
 
 h1 {
   font-size: 60px;
   text-align: center;
   margin: 0;
   padding: 20px 0;    
-  color: #00539F;
-  text-shadow: 3px 3px 1px black;
+  color: #364F80;
+  text-shadow: 3px 3px 1px gray;
 }
 
 p, li {
@@ -20,10 +20,73 @@ p, li {
 }
 
 body {
-  width: 600px;
+  height: 800px;
+  width: 800px;
   margin: 0 auto;
-  background-color: #FF9500;
-  padding: 0 20px 20px 20px;
+  background-color: #DBB5A9;
   border: 5px solid black;
+} 
+
+#welcome_text {
+  width: 400px;
 }
 
+#my_image {
+  height: 320px;
+  width: 245px;
+}
+
+table {
+  margin: 0px auto;
+  background-color: #41423F;
+}
+
+td {
+  padding-right: 10px;
+  background-color: #6F7D96;
+}
+
+nav a {
+ padding-right: 15px; 
+ padding-bottom: 4px;
+ text-decoration: none;
+ color: black;
+}
+nav a:hover {
+   border-bottom: 2px solid #364F80;
+}
+
+.hobby {
+  color: black;
+  font-weight: bold;
+}
+
+#footer_image {
+  width: 240px;
+  height: 80px;
+  text-align: center;
+}
+
+figure, footer, nav {
+  text-align: center;
+}
+
+#image, #welcome_text {
+  float:left;
+}
+
+footer {
+  font-size: 13px;
+  clear:left;
+}
+
+#contact_form {
+  width: 700px;
+  height: 400px;
+  border: 0;
+  margin: 0 auto;
+}
+
+#contact_box{
+  text-align: center;
+}

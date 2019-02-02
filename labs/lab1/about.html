@@ -1,42 +1,26 @@
 <!DOCTYPE html>
 <html>
-<!--
-
-First Website
-and comment
-in html
-(comments can span multiple lines)
-
--->
-
-<!-- This is the head -->
-<!-- All styles and javascript go inside the head -->
     <head>
         <meta charset= "utf-8"/>
         <title> Personal Website</title>
         <link href="styles/style.css" rel="stylesheet" type="text/css">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     </head>
-<!-- closing head -->
-
-    <!-- This is the body -->
-    <!-- This is where we place the content of our website -->
     <body>
         <header>
             <h1> Shwetha Prahlad</h1>
         </header>
         <nav>
-            <hr width = "50%" />
-            <a href = "index.html">Home</a> </br>
-            <a href = "about.html">About</a> </br>
-            <a href = "contact.html">Contact</a> </br>
+            <a href = "index.html">Home</a>
+            <a href = "about.html">About</a>
+            <a href = "contact.html">Contact</a>
         </nav>
         <br/><br/>
         <div id = "content">
             <table>
                 <tr id = "table-header">
-                    <td>Programming Language</td>
-                    <td>Years of Experience</td>
+                    <td><strong>Programming Language</strong></td>
+                    <td><strong>Years of Experience</strong></td>
                 </tr>
                 <tr class = "table-row">
                     <td>C++</td>
@@ -48,20 +32,20 @@ in html
                 </tr>
             </table>
         </div>
+        <br/><br/><br/>
         <ul>
-            <li>I am a vocalist trained in Indian Classical Carnatic Music.</li>
-            <li>I love reading fantasy books and Harry Potter Series is my all-time favorite book.</li>
-            <li>I love cooking and feeding my loved ones.</li>
+            <li><span class= "hobby">Music</span>: I am a vocalist trained in Indian Classical Carnatic Music.</li>
+            <li><span class= "hobby">Books</span>: I love reading fantasy books and Harry Potter series is my all-time favorite.</li>
+            <li><span class= "hobby">Food</span>: I enjoy cooking and exploring different cuisines.</li>
+            <li><span class= "hobby">Volunteering</span>: I am passionate about teaching and volunteering with children.</li>
         </ul>
-        <!-- This is the footer -->
-        <!-- The footer goes inside the body but not always -->
-        <footer>
-            
-            
+      <footer>
+            <br/><br/><br/><br/><br/><br/><br/>
+            &copy; 2019 Shwetha Prahlad, CST 336 Internet Programming.<br/>
+            Disclaimer: The content on this web page is fictitious. It represents information only for academic purposes.<br/> <br/>
+            <div>
+               <img src = "../../images/CSUMB_Logo.png" id = "footer_image"/>
+            </div>
         </footer>
-        <!-- closing footer -->
-        
     </body>
-    <!-- closing body -->
-
 </html>
