@@ -34,8 +34,9 @@ body {
   height: 1200px;
   width: 1200px;
   margin: 0 auto;
-  background-color: #90C3D4;
-  border: 5px solid black;
+ /* background-color: #90C3D4;*/
+  border-radius: 25px;
+  background-image: linear-gradient(#90C3D4, #CADEC3);
 } 
 
 nav a {
