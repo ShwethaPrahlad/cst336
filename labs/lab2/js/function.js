@@ -16,6 +16,7 @@
             if (userGuess > 99)
             {
              lastResult.innerHTML = 'Error, the number you have typed is higher than 99!';
+             guessCount = guessCount - 1;
             }
             else{
               if (guessCount === 1) {
