@@ -12,20 +12,23 @@
             //var resetButton;
             
             function checkGuess(){
-                var userGuess = Number(guessField.value);
-                if (guessCount === 1) {
+            var userGuess = Number(guessField.value);
+            if (userGuess < 99)
+            {
+              if (guessCount === 1) {
                 guesses.innerHTML = 'Previous guesses: ';
                 }
-             guesses.innerHTML += userGuess + ' ';
-             if (userGuess === randomNumber){
-              lastResult.innerHTML = 'Congratulations, you got it right!';
-              lastResult.style.backgroundColor= 'green';
-              lowOrHi.innerHTML = '';
-              setGameOver();
-             }else if (guessCount === 7){
+              guesses.innerHTML += userGuess + ' ';
+            
+              if (userGuess === randomNumber){
+               lastResult.innerHTML = 'Congratulations, you got it right!';
+               lastResult.style.backgroundColor= 'green';
+               lowOrHi.innerHTML = '';
+               setGameOver();
+              }else if (guessCount === 7){
               lastResult.innerHTML = 'Sorry, you lost!';
               setGameOver();
-             }else {
+              }else {
               lastResult.innerHTML = 'Wrong!';
               lastResult.style.backgroundColor= 'red';
               if (userGuess < randomNumber){
@@ -35,6 +38,11 @@
               lowOrHi.innerHTML = 'Your last guess was too high!';
               }
              }
+            }
+             else{
+             lastResult.innerHTML = 'Error, the number you have typed is higher than 99!';
+             }
+            
              guessCount++;
              guessField.value = '';
              guessField.focus();
@@ -65,4 +73,7 @@
             }
             $("#guessHeader").append("!");
             $("#submitBtn").css("background-color", "cyan");
+            $("#guessHeader").css("color", "#364F80")
+            $("#guessHeader").css("font-size", "60px")
+            $("#guessHeader").css("font-family", "Open sans")
 
