@@ -13,13 +13,15 @@
             
             function checkGuess(){
             var userGuess = Number(guessField.value);
-            if (userGuess < 99)
+            if (userGuess > 99)
             {
+             lastResult.innerHTML = 'Error, the number you have typed is higher than 99!';
+            }
+            else{
               if (guessCount === 1) {
                 guesses.innerHTML = 'Previous guesses: ';
                 }
               guesses.innerHTML += userGuess + ' ';
-            
               if (userGuess === randomNumber){
                lastResult.innerHTML = 'Congratulations, you got it right!';
                lastResult.style.backgroundColor= 'green';
@@ -39,10 +41,6 @@
               }
              }
             }
-             else{
-             lastResult.innerHTML = 'Error, the number you have typed is higher than 99!';
-             }
-            
              guessCount++;
              guessField.value = '';
              guessField.focus();
