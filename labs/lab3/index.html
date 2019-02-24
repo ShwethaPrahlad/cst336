@@ -83,10 +83,10 @@
          <button id = "submitBtn">Submit</button>
          <h2 id = "validSubmission"></h2>
          <h2 id = "totalTimes"></h2>
-         <h2 id = "prevScores"></h2><br><br><br>
+         <h2 id = "prevScores"></h2>
     </body>
     <footer>
-        <div id = "footer">
+        <div id = "footerDiv">
         &copy; 2019 Shwetha Prahlad, CST 336 Internet Programming.<br/>
         Disclaimer: The content on this web page is fictitious. It represents information only for academic purposes.<br/> <br/>
           <div id = "logo">
@@ -229,7 +229,7 @@
             //-----------Total Score------------
             $("#total").html("The total Score is: " + total_points);
             if (total_points == 100){
-                $("#congratsMessage").html("Congratulations, you have a high score!");
+                $("#congratsMessage").html("Congratulations, you got a high score!");
             }
             totalTimes++;
             //alert(totalTimes);
