@@ -1,0 +1,46 @@
+html{
+      background-image: url('../img/globe.jpeg');
+}
+.jumbotron {
+                text-align: center; 
+            }
+            
+body {
+   text-align: center; 
+   background-color: #208E78;
+   background-image: linear-gradient(#DAB177, #208E78);
+   width: 1000px;
+   height: 1600px;
+   margin: 0 auto;
+   font-size: 18px; 
+   font-family: 'Open sans', sans-serif;
+}
+
+#header {
+   background-color: #DAB177;
+   height: 150px;
+}
+
+h1 {
+   text-align:center; 
+   font-family: 'Open sans', sans-serif; 
+   color: black;
+   font-size: 42px; 
+}
+
+#submitBtn {
+    background-color: #DAB177;
+    border-radius: 10px;
+    width: 120px;
+    height: 60px;
+    font-size: 30px
+}
+.correct{
+    color: green;
+    font-size: 25px;
+}
+
+.incorrect{
+    color: red;
+    font-size: 25px;
+}
