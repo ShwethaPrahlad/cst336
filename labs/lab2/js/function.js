@@ -9,9 +9,6 @@
             var resetButton = document.querySelector("#reset");
             resetButton.style.display = 'none';
             guessField.focus();
-            var wonCount = 0;
-            var lostCount = 0;
-            var gameCount = 0;
             var gc = document.querySelector('#gc');
             //var resetButton;
             
@@ -51,7 +48,6 @@
              guessCount++;
              guessField.value = '';
              guessField.focus();
-             gameCount++;
             }
             
             guessSubmit.addEventListener ('click', checkGuess);
@@ -79,14 +75,6 @@
                 //console.log (randomNumber);
             }
             
-            if (gameCount >5){
-                gameOver();
-            } 
-            function gameOver(){
-                var gc;
-                gc.innerHTML = 'The number of games won in 5 games is' + ' '+ Number(wonCount);
-                gc.innerHTML = 'The number of games lost in 5 games is' + ' ' + Number(lostCount);
-              }
             $("#guessHeader").append("!");
             $("#submitBtn").css("background-color", "cyan");
             $("#guessHeader").css("color", "#364F80")

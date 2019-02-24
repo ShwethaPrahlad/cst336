@@ -1,6 +1,7 @@
 html{
       background-image: url('../img/globe.jpeg');
 }
+
 .jumbotron {
                 text-align: center; 
             }
@@ -10,7 +11,7 @@ body {
    background-color: #208E78;
    background-image: linear-gradient(#DAB177, #208E78);
    width: 1000px;
-   height: 1600px;
+   height: 2000px;
    margin: 0 auto;
    font-size: 18px; 
    font-family: 'Open sans', sans-serif;
@@ -28,12 +29,12 @@ h1 {
    font-size: 42px; 
 }
 
-#submitBtn {
+#submitBtn, #playAgain {
     background-color: #DAB177;
     border-radius: 10px;
-    width: 120px;
-    height: 60px;
-    font-size: 30px
+    width: 150px;
+    height: 70px;
+    font-size: 25px;
 }
 .correct{
     color: green;
@@ -43,4 +44,16 @@ h1 {
 .incorrect{
     color: red;
     font-size: 25px;
+}
+
+#footer_image {
+  width: 240px;
+  height: 80px;
+  text-align: center;
+}
+
+footer {
+    position: absolute;
+    top: 1800px;
+    padding-left: 70px;
 }

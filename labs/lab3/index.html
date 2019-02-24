@@ -79,11 +79,21 @@
          <br>
          <h2 id = "total"></h2>
          <h2 id = "congratsMessage"></h2>
+         <button id= "playAgain">Play Again</button>
          <button id = "submitBtn">Submit</button>
          <h2 id = "validSubmission"></h2>
          <h2 id = "totalTimes"></h2>
-         <h2 id = "prevScores"></h2>
+         <h2 id = "prevScores"></h2><br><br><br>
     </body>
+    <footer>
+        <div id = "footer">
+        &copy; 2019 Shwetha Prahlad, CST 336 Internet Programming.<br/>
+        Disclaimer: The content on this web page is fictitious. It represents information only for academic purposes.<br/> <br/>
+          <div id = "logo">
+               <img src = "../../images/CSUMB_Logo.png" id = "footer_image"/>
+          </div>
+        </div>
+    </footer>
     <script>
         let q1_value = 20;
         let q2_value = 20;
@@ -97,6 +107,8 @@
         let q5_response = "";
         let totalTimes = localStorage.getItem("totalTimesTaken");
         let scoresArray = localStorage.getItem("scoreHistory");
+        let playAgain = document.querySelector("#playAgain");
+        playAgain.style.display = 'none';
         if (isNaN(totalTimes)){
             totalTimes = 0;
         }
@@ -117,25 +129,25 @@
           let isValid = true;
             if ($("#q1").val() == "") {
                 isValid = false;
-                $("#validSubmission").html("Question 1 not answered");
+                $("#validSubmission").html("*Question 1 is a required field");
             }
             if (isValid == false){
                if ($("#q2").val() == "Select One") {
                 isValid = false;
-                $("#validSubmission").html("Question 1 and 2 not answered");
+                $("#validSubmission").html("*Question 1 and 2 are required fields");
                 }
              } 
             else {
                 if ($("#q2").val() == "Select One") {
                 isValid = false;
-                $("#validSubmission").html("Question 2 not answered");
+                $("#validSubmission").html("*Question 2 is a required field");
               }
             }
             return isValid;
         }
         
     $("#submitBtn").on( "click", function() {
-            
+              
           $("#validSubmission").html("");
           if (!isFormValid()) {   //isFormValid == false
             return;
@@ -231,7 +243,13 @@
             
             localStorage.setItem("scoreHistory",scoresArray);
             
+            //----------Play Again---------------
+            playAgain.style.display = 'inline';
+            $("#playAgain").on( "click", function() {
+            document.location.reload(true);
         });
+        });
+
 
     </script>
 </html>
