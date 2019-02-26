@@ -292,7 +292,16 @@
                 total_points += q4_value;
                 $("#checkMark4").html("<img src = 'img/checkmark.png' alt ='checkmark'>");
               //  $("#q4_feedback").attr("class", "correct");
-            }else{
+            }else if($("#checkboxOption1").is(":checked") == true && $("#checkboxOption2").is(":checked") == true 
+            && $("#checkboxOption5").is(":checked") == false && $("#checkboxOption3").is(":checked") == false 
+            && $("#checkboxOption4").is(":checked") == false){
+                
+                $("#q4_response").html(q4_response);
+                $("#q4_value").html("0");
+                $("#q4_feedback").html("Oops that was close! The general tabs to filter search are : All, Images, Maps, News, Videos, More (which contains few more options) ");
+                 $("#xMark4").html("<img src = 'img/xmark.png' alt ='xmark'>");
+            }
+            else{
                 $("#q4_response").html(q4_response);
                 $("#q4_value").html("0");
                 $("#q4_feedback").html("Sorry that's incorrect! The general tabs to filter search are : All, Images, Maps, News, Videos, More (which contains few more options) ");
@@ -304,7 +313,7 @@
             
             if (q5_response == q5_answer) {
                 $("#q5_response").html(q5_response); 
-                $("#q5_feedback").html("Correct!");
+                $("#q5_feedback").html("You got that right! Picture 1 indicates Images results, Picture 2 indicates  Videos results, Picture 3 indicates News results, and Picture 4 indicates All results");
                 $("#q5_value").html("20");
                 total_points += q5_value;
                 $("#checkMark5").html("<img src = 'img/checkmark.png' alt ='checkmark'>");
@@ -312,7 +321,7 @@
             }else{
                 $("#q5_response").html(q5_response);
                 $("#q5_value").html("0");
-                $("#q5_feedback").html("Incorrect!");
+                $("#q5_feedback").html("Sorry that's incorrect! Picture 1 indicates Images results, Picture 2 indicates  Videos results, Picture 3 indicates News results, and Picture 4 indicates All results");
                  $("#xMark5").html("<img src = 'img/xmark.png' alt ='xmark'>");
                //  $("#q5_feedback").attr("class", "incorrect");
             }
@@ -320,7 +329,7 @@
             
              if (q6_response == q6_answer) {
                 $("#q6_response").html(q6_response);  
-                $("#q6_feedback").html("Correct!");
+                $("#q6_feedback").html("CYou got that right! The answer is 10 pages.");
                 $("#q6_value").html("20");
                 total_points += q1_value;
                 $("#checkMark6").html("<img src = 'img/checkmark.png' alt ='checkmark'>");
@@ -328,7 +337,7 @@
             }else{
                 $("#q6_response").html(q6_response);
                 $("#q6_value").html("0");
-                $("#q6_feedback").html("Incorrect!");
+                $("#q6_feedback").html("Sorry that's incorrect! The answer is 10 pages.");
                 $("#xMark6").html("<img src = 'img/xmark.png' alt ='xmark'>");
               //  $("#q6_feedback").attr("class", "incorrect");
             }
