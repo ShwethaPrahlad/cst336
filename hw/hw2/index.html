@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Google Search Quiz</title>
+        <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+        <!--Bootstrap files-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href= "styles/styles.css">
+    </head>
+    <body>
+        <!-- Header-->
+         <div id ="header" class = "jumbotron">
+         <h1>Google Search Quiz</h1>
+         </div>
+         <br>
+         <h5>* indicates required fields</h5>
+         <!-- ---------Question 1----------- -->
+         <br>
+         <div id ="question1">
+             <h2><span id ="checkMark1"></span><span id ="xMark1"></span>
+             1. The pages on Google search can be navigated using?</h2>
+             <input type = "radio" name = "q1" id = "radioOption1" value = "Page numbers"><label for = "radioOption1">Page numbers</label>
+             <input type = "radio" name = "q1" id = "radioOption2" value = "The letter o in Google logo"><label for = "radioOption2">The letter o in Google logo</label>
+             <input type = "radio" name = "q1" id = "radioOption3" value = "Either"><label for = "radioOption3">Either</label>
+             <input type = "radio" name = "q1" id = "radioOption4" value = "None"><label for = "radioOption4">None</label>
+         </div>
+         <br>
+         <!--<div id = "q1_feedback"></div>-->
+         
+         <!-- ---------Question 2----------- -->
+         <div id ="question2">
+           <h2><span id ="checkMark2"></span><span id ="xMark2"></span>
+           2. The icon on the right corner inside the Google search bar indicates&#42;</h2> 
+           <select id = "q2">
+               <option>Select One</option>
+               <option>Voice Search</option>
+               <option>Search button</option>
+               <option>I&#8217;m feeling lucky</option>
+               <option>Search Lens</option>
+           </select>
+         </div>
+         <br>
+         <!--<div id = "q2_feedback"></div>-->
+         
+         <!-- ---------Question 3----------- -->
+         <div id = "question3">
+           <h2><span id ="checkMark3"></span><span id ="xMark3"></span>
+           3. Among the tabs on Google Search page, which tab has the following options to filter your research further?&#42;</h2>
+           <img src ="img/filters.png" alt = "Google Filters" id="gFilters"><br><br>
+           <input type ="text" id = "q3">  
+         </div>
+         <br>
+         <!--<div id = "q3_feedback"></div>-->
+         
+         <!-- ---------Question 4----------- -->
+         <div id = "question4">
+             <h2><span id ="checkMark4"></span><span id ="xMark4"></span>4. Google Search results can be filtered using the tab(s)</h2>
+             <input type="checkbox" id="checkboxOption1"><label for = "checkboxOption1">Images</label>
+             <input type="checkbox" id="checkboxOption2"><label for = "checkboxOption2">Videos</label></label>
+             <input type="checkbox" id="checkboxOption3"><label for = "checkboxOption3">Articles</label>
+             <input type="checkbox" id="checkboxOption4"><label for = "checkboxOption4">Pictures</label>
+             <input type="checkbox" id="checkboxOption5"><label for = "checkboxOption5">News</label>
+         </div>
+         <br>
+         <!--<div id = "q4_feedback"></div>-->
+         
+         <!-----------Question 5------------->
+         <div id = "question5">
+             <h2><span id ="checkMark5"></span><span id ="xMark5">
+            5. Which of these pictures resemble the search results from the <strong>News</strong> tab on Google search?</h2>
+            <div id = "gallery">
+             <h4>1.</h4><img src ="img/image1.png" alt = "picture 1" class="active" id="picture1">
+             <h4>2.</h4><img src ="img/image2.png" alt = "picture 2" class="active" id="picture2">
+             <h4>3.</h4><img src ="img/image3.png" alt = "picture 3" class="active" id="picture3">
+             <h4>4.</h4><img src ="img/image4.png" alt = "picture 3" class="active" id="picture4">
+            </div>
+         </div>
+         <br>
+         <!--<div id = "q5_feedback"></div>-->
+         <br>
+         <!-------------Question 6-------------->
+         <div id ="question6">
+             <h2><span id ="checkMark6"></span><span id ="xMark6"></span>6. How many pages of search results are displayed at once?</h2>
+             <input type = "number" id = "q6">
+         </div>
+         <br>
+         <!--<div id = "q6_feedback"></div>-->
+         
+         <!----------Scores and Submit-------->
+         <br>
+         <h2 id = "total"></h2>
+         <h2 id = "congratsMessage"></h2><span id ="expertBadge"></span>
+         <button id= "playAgain">Play Again</button>
+         <button id = "submitBtn">Submit</button>
+         <h2 id = "validSubmission"></h2>
+         <h2 id = "totalTimes"></h2>
+         <h2 id = "prevScores"></h2>
+         <h2 id = "response"></h2> 
+         <h2 id = "solutions">You can check the solutions below!</h2>
+         <div id = "table">
+            <table id = "resTable">
+                <tr id = "table-header">
+                    <td><strong>Your response</strong></td>
+                    <td><strong>Right answer</strong></td>
+                    <td><strong>Points scored</strong></td>
+                </tr>
+                <tr class = "table-row">
+                    <td><div id = "q1_response"></div></td>
+                    <td><div id = "q1_feedback"></div></td>
+                    <td><div id = "q1_value"></div></td>
+                </tr>
+                 <tr class = "table-row">
+                    <td><div id = "q2_response"></div></td>
+                    <td><div id = "q2_feedback"></div></td>
+                    <td><div id = "q2_value"></div></td>
+                </tr>
+                 <tr class = "table-row">
+                    <td><div id = "q3_response"></div></td>
+                    <td><div id = "q3_feedback"></div></td>
+                    <td><div id = "q3_value"></div></td>
+                </tr>
+                 <tr class = "table-row">
+                    <td><div id = "q4_response"></div></td>
+                    <td><div id = "q4_feedback"></div></td>
+                    <td><div id = "q4_value"></div></td>
+                </tr>
+                 <tr class = "table-row">
+                    <td><div id = "q5_response"></div></td>
+                    <td><div id = "q5_feedback"></div></td>
+                    <td><div id = "q5_value"></div></td>
+                </tr>
+                 <tr class = "table-row">
+                    <td><div id = "q6_response"></div></td>
+                    <td><div id = "q6_feedback"></div></td>
+                    <td><div id = "q6_value"></div></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+    <footer>
+        <div id = "footerDiv">
+        &copy; 2019 Shwetha Prahlad, CST 336 Internet Programming.<br/>
+        Disclaimer: The content on this web page is fictitious. It represents information only for academic purposes.<br/> <br/>
+          <div id = "logo">
+               <img src = "../../images/CSUMB_Logo.png" id = "footer_image"/>
+          </div>
+        </div>
+    </footer>
+    <script>
+        let q1_value = 20;
+        let q2_value = 20;
+        let q3_value = 20;
+        let q4_value = 20;
+        let q5_value = 20;
+        let q1_answer = "Either";
+        let q2_answer = "Voice Search";
+        let q3_answer = "images"
+        let q5_answer = "picture3";
+        let q5_response = "";
+        let q6_answer = "10";
+        let totalTimes = localStorage.getItem("totalTimesPlayed");
+        let scoresArray = localStorage.getItem("pointsHistory");
+        let playAgain = document.querySelector("#playAgain");
+        let responseTable = document.querySelector("#table");
+        let solutions = document.querySelector ("#solutions");
+        playAgain.style.display = 'none';
+        responseTable.style.display = 'none';
+        solutions.style.display = 'none';
+        
+        if (isNaN(totalTimes)){
+            totalTimes = 0;
+        }
+        if (scoresArray == null) {
+            scoresArray = [];
+        } else {
+            scoresArray = scoresArray.split(","); //creates array from a string
+        }
+            
+             $(".active").on( "click", function() {
+             $(".active").css("background","");
+             $(this).css("background","yellow");
+             //alert($(this).attr("id"));
+             q5_response = $(this).attr("id");
+        });
+        
+        function isFormValid(){
+          let isValid = true;
+            if ($("#q2").val() == "Select One") {
+                isValid = false;
+                $("#validSubmission").html("*Question 2 is a required field");
+            }
+            if (isValid == false){
+               if ($("#q3").val() == "") {
+                isValid = false;
+                $("#validSubmission").html("*Question 2 and 3 are required fields");
+                }
+             } 
+            else {
+                if ($("#q3").val() == "") {
+                isValid = false;
+                $("#validSubmission").html("*Question 3 is a required field");
+              }
+            }
+            return isValid;
+        }
+        
+    $("#submitBtn").on( "click", function() {
+              
+          $("#validSubmission").html("");
+          if (!isFormValid()) {   //isFormValid == false
+            return;
+          }
+            
+            let total_points = 0;
+            let q1_response = $("input[name=q1]:checked").val();
+            let q2_response = $("#q2").val();
+            let q3_response = $("#q3").val().toLowerCase();
+            let q6_response = $("#q6").val();
+            
+            
+            //-----------Question 1-----------
+           
+           if (q1_response == q1_answer) {
+                $("#q1_response").html(q1_response);
+                $("#q1_feedback").html("You got that right! You can either click on the page numbers or the 'o's, both allows you to navigate through pages.");
+                $("#q1_value").html("20");
+                total_points += q1_value;
+                $("#checkMark1").html("<img src = 'img/checkmark.png' alt ='checkmark'>");
+               // $("#q1_feedback").attr("class", "correct");
+            }else if (q1_response == "Page numbers" || q1_response == "The letter o in Google logo"){
+                $("#q1_response").html(q1_response);
+                $("#q1_feedback").html("Oops that was close but the answer is Either, you can either click on the page numbers or the 'o's, both allows you to navigate pages!");
+                $("#q1_value").html("0");
+                $("#xMark1").html("<img src = 'img/xmark.png' alt ='xmark'>");
+               // $("#q1_feedback").attr("class", "incorrect");
+            }
+            else {
+                $("#q1_response").html(q1_response);
+                $("#q1_feedback").html("Sorry that's incorrect! The answer is Either, you can either click on the page numbers or the 'o's, both allows you to navigate pages!");
+                $("#q1_value").html("0");
+                $("#xMark1").html("<img src = 'img/xmark.png' alt ='xmark'>");
+               // $("#q1_feedback").attr("class", "incorrect");
+            }
+            
+            
+            
+            
+            //-----------Question 2-----------
+             
+            if (q2_response == q2_answer) {
+                $("#q2_response").html(q2_response);
+                $("#q2_feedback").html("You got that right! You can see a tiny microphone that indicates Voice Search on the right.");
+                $("#q2_value").html("20");
+                total_points += q2_value;
+                 $("#checkMark2").html("<img src = 'img/checkmark.png' alt ='checkmark'>");
+                // $("#q2_feedback").attr("class", "correct");
+            }else{
+                $("#q2_response").html(q2_response);
+                $("#q2_value").html("0");
+                $("#q2_feedback").html("Sorry that's incorrect. You can see a tiny microphone that indicates Voice Search on the right.");
+                $("#xMark2").html("<img src = 'img/xmark.png' alt ='xmark'>");
+               // $("#q2_feedback").attr("class", "incorrect");
+            }
+            
+            //-----------Question 3------------
+            
+             if (q3_response == q3_answer) {
+                $("#q3_response").html(q3_response);
+                $("#q3_feedback").html("You got that right! These options are visible if you click on the tools icon in the images tab.");
+                $("#q3_value").html("20");
+                total_points += q3_value;
+                $("#checkMark3").html("<img src = 'img/checkmark.png' alt ='checkmark'>");
+              //  $("#q3_feedback").attr("class", "correct");
+            }else{
+                $("#q3_response").html(q3_response);
+                $("#q3_value").html("0");
+                $("#q3_feedback").html("Sorry that's incorrect! The answer is the images tab. These options are visible if you click tools icon in the images tab.");
+                 $("#xMark3").html("<img src = 'img/xmark.png' alt ='xmark'>");
+              //   $("#q3_feedback").attr("class", "incorrect");
+            }
+            
+            //-----------Question 4------------
+            
+            if ($("#checkboxOption1").is(":checked") == true && $("#checkboxOption2").is(":checked") == true 
+            && $("#checkboxOption5").is(":checked") == true && $("#checkboxOption3").is(":checked") == false 
+            && $("#checkboxOption4").is(":checked") == false)
+            {
+             $("#q4_response").html(q4_response);   
+             $("#q4_feedback").html("You got that right! The general tabs to filter search are : All, Images, Maps, News, Videos, More (which contains few more options)");
+                $("#q4_value").html("20");
+                total_points += q4_value;
+                $("#checkMark4").html("<img src = 'img/checkmark.png' alt ='checkmark'>");
+              //  $("#q4_feedback").attr("class", "correct");
+            }else{
+                $("#q4_response").html(q4_response);
+                $("#q4_value").html("0");
+                $("#q4_feedback").html("Sorry that's incorrect! The general tabs to filter search are : All, Images, Maps, News, Videos, More (which contains few more options) ");
+                 $("#xMark4").html("<img src = 'img/xmark.png' alt ='xmark'>");
+              //  $("#q4_feedback").attr("class", "incorrect");
+            }
+            
+            //---------Question 5-------------
+            
+            if (q5_response == q5_answer) {
+                $("#q5_response").html(q5_response); 
+                $("#q5_feedback").html("Correct!");
+                $("#q5_value").html("20");
+                total_points += q5_value;
+                $("#checkMark5").html("<img src = 'img/checkmark.png' alt ='checkmark'>");
+              //  $("#q5_feedback").attr("class", "correct");
+            }else{
+                $("#q5_response").html(q5_response);
+                $("#q5_value").html("0");
+                $("#q5_feedback").html("Incorrect!");
+                 $("#xMark5").html("<img src = 'img/xmark.png' alt ='xmark'>");
+               //  $("#q5_feedback").attr("class", "incorrect");
+            }
+            //----------Question 6-------------
+            
+             if (q6_response == q6_answer) {
+                $("#q6_response").html(q6_response);  
+                $("#q6_feedback").html("Correct!");
+                $("#q6_value").html("20");
+                total_points += q1_value;
+                $("#checkMark6").html("<img src = 'img/checkmark.png' alt ='checkmark'>");
+              //  $("#q6_feedback").attr("class", "correct");
+            }else{
+                $("#q6_response").html(q6_response);
+                $("#q6_value").html("0");
+                $("#q6_feedback").html("Incorrect!");
+                $("#xMark6").html("<img src = 'img/xmark.png' alt ='xmark'>");
+              //  $("#q6_feedback").attr("class", "incorrect");
+            }
+            //-----------Total Score------------
+            solutions.style.display = 'inline'
+            responseTable.style.display = 'inline';
+            $("#total").html("The total Score is: " + total_points);
+            if (total_points == 120){
+                $("#congratsMessage").html("Congratulations, you have won a Google Search expert badge!");
+                $("#expertBadge").html("<img src = 'img/expertbadge.png' alt = 'Google Search Expert badge'>");
+            }
+            totalTimes++;
+            //alert(totalTimes);
+            localStorage.setItem("totalTimesPlayed",totalTimes);
+            $("#totalTimes").html("Quiz taken: " + totalTimes + " time(s)");
+            scoresArray.push(total_points);
+            $("#prevScores").html("Score History: ");
+            scoresArray.forEach(function(score){
+            $("#prevScores").append(score + " ");
+            });
+            
+            localStorage.setItem("pointsHistory",scoresArray);
+            
+            //----------Play Again---------------
+            
+            playAgain.style.display = 'inline';
+            $("#playAgain").on( "click", function() {
+            document.location.reload(true);
+            
+            
+            
+        });
+        });
+
+
+    </script>
+</html>
