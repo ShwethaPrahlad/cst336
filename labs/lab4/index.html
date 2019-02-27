@@ -71,18 +71,25 @@
             
         });//zipCode
         
-        $("#userName").on("change", function(){
+        $("#username").on("change", function(){
             
-        //alert( $("#userName").val());
+        //alert( $("#username").val());
         $.ajax({
 
         type: "GET",
         url: "http://myspace.csumb.edu/~milara/ajax/username/usernameLookup.php",
         dataType: "json",
-        data: { "username":$("#userName").val() },
+        data: {"username":$("#username").val()},
         success: function(data,status) {
+  
         //alert(data);
-        
+        if (status == true){
+         $("#username").html("Username is available!");  
+         $("#username").css(username, green);
+        } else{
+         $("#username").html("Username is not available!");  
+         $("#username").css(username, red);  
+        }
         },
         complete: function(data,status) { //optional, used for debugging purposes
         //alert(status);
@@ -90,7 +97,7 @@
 
         });//ajax
 
-       });//userName
+       });//username
 
 
 
@@ -135,7 +142,7 @@
         
         Select a County: <select id="county"></select><br>
         
-        Desired Username: <input type="text" id = "userName"><br>
+        Desired Username: <input type="text" id = "username"><br>
         Password: <input type="password"><br>
         Type Password Again: <input type="password" id = "password"><br>
         <input type="submit" value="Sign up!">

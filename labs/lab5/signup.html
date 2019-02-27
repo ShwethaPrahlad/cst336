@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Sign Up Page </title>
+</head>
+<body>
+    <fieldset>
+        <legend>
+            Sign Up
+        </legend>
+        First Name: <input type = "text" id = "firstName" name = "firstName"/> <br>
+        Last Name: <input type = "text" id = "lastName" name = "lastName"/><br>
+        
+        Username 1: <input type = "text" id = "username1" name = "username1"/><br>
+        <span id = "username1Error"/><br>
+        
+        Username 2: <input type = "text" id = "username2" name = "username2"/><br>
+        <span id = "username2Error"/><br>
+       
+    </fieldset>
+</body>
+<script>
+   
+  $(document).ready( function(){
+      
+      $("#username1").on("change", function() {
+        $.ajax({
+              type: "GET",
+                url: "checkUsername_text.php",
+                dataType: "json",
+                data: { "username": $("#username1").val() },
+                success: function(data,status) {
+                  $("#usernameError").html("Username is available!");
+                },
+                complete: function(data,status) { //optional, used for debugging purposes
+                //alert(status);
+                }
+        }); //ajax  
+        
+      }); //username1
+        
+        $("#username2").on("change", function() {
+        $.ajax({
+              type: "GET",
+                url: "checkUsername_json.php",
+                dataType: "json",
+                data: { "username": $("#username2").val() },
+                success: function(data,status) {
+                  $("#usernameError").html("Username is available");
+                 
+                
+                },
+                complete: function(data,status) { //optional, used for debugging purposes
+                //alert(status);
+                }
+        }); //ajax
+                
+    }); //username2
+            
+      
+  });
+  
+</script>
