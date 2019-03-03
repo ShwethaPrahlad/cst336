@@ -11,11 +11,16 @@
         First Name: <input type = "text" id = "firstName" name = "firstName"/> <br>
         Last Name: <input type = "text" id = "lastName" name = "lastName"/><br>
         
-        Username 1: <input type = "text" id = "username1" name = "username1"/><br>
+        Username: <input type = "text" id = "username1" name = "username1"/><br>
         <span id = "username1Error"/><br>
         
-        Username 2: <input type = "text" id = "username2" name = "username2"/><br>
+        Username: <input type = "text" id = "username2" name = "username2"/><br>
         <span id = "username2Error"/><br>
+        
+        Password: <input type = "password" id = "password" name = "password"/><br>
+        <span id = "passwordError"/><br>
+        
+        <button id = "signUpBtn">Sign Up!</button>
        
     </fieldset>
 </body>
@@ -46,6 +51,7 @@
                 dataType: "json",
                 data: { "username": $("#username2").val() },
                 success: function(data,status) {
+                  
                   $("#usernameError").html("Username is available");
                  
                 

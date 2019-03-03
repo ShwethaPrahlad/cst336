@@ -56,11 +56,11 @@
          <!-- ---------Question 4----------- -->
          <div id = "question4">
              <h2><span id ="checkMark4"></span><span id ="xMark4"></span>4. Google Search results can be filtered using the tab(s)</h2>
-             <input type="checkbox" id="checkboxOption1" name="checkbox"><label for = "checkboxOption1">Images</label>
-             <input type="checkbox" id="checkboxOption2" name="checkbox"><label for = "checkboxOption2">Videos</label></label>
-             <input type="checkbox" id="checkboxOption3" name="checkbox"><label for = "checkboxOption3">Articles</label>
-             <input type="checkbox" id="checkboxOption4" name="checkbox"><label for = "checkboxOption4">Pictures</label>
-             <input type="checkbox" id="checkboxOption5" name="checkbox"><label for = "checkboxOption5">News</label>
+             <input type="checkbox" id="checkboxOption1" name="checkbox" value = "Images"><label for = "checkboxOption1">Images</label>
+             <input type="checkbox" id="checkboxOption2" name="checkbox" value = "Videos"><label for = "checkboxOption2">Videos</label></label>
+             <input type="checkbox" id="checkboxOption3" name="checkbox" value = "Articles"><label for = "checkboxOption3">Articles</label>
+             <input type="checkbox" id="checkboxOption4" name="checkbox" value = "Pictures"><label for = "checkboxOption4">Pictures</label>
+             <input type="checkbox" id="checkboxOption5" name="checkbox" value = "News"><label for = "checkboxOption5">News</label>
          </div>
          <br>
          <!--<div id = "q4_feedback"></div>-->
@@ -157,6 +157,7 @@
         let q2_answer = "Voice Search";
         let q3_answer = "images"
         let q5_answer = "picture3";
+        let q4_response = "";
         let q5_response = "";
         let q6_answer = "10";
         let totalTimes = localStorage.getItem("totalTimesPlayed");
@@ -184,6 +185,18 @@
              q5_response = $(this).attr("id");
         });
         
+        let checkArray = [""];
+        let i= 0;
+        $("input[name=checkbox]").on( "click", function() {
+          $("input[name='checkbox']:checked").each ( function(i) {
+          checkArray[i]= $("input[name=checkbox]:checked").attr("value") + ",";
+         });
+         alert(checkArray);
+         q4_response= checkArray[i];
+        });
+        
+        
+       
         function isFormValid(){
           let isValid = true;
             if ($("#q2").val() == "Select One") {
@@ -287,7 +300,6 @@
             && $("#checkboxOption5").is(":checked") == true && $("#checkboxOption3").is(":checked") == false 
             && $("#checkboxOption4").is(":checked") == false)
             {
-             q4_response = $("input[name='checkbox']:checked").val();
              $("#q4_response").html(q4_response);   
              $("#q4_feedback").html("You got that right! The general tabs to filter search are : All, Images, Maps, News, Videos, More (which contains few more options)");
                 $("#q4_value").html("20");

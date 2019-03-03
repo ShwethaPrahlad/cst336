@@ -1,0 +1,88 @@
+html{
+      background-image: url("../img/computer.jpg");
+}
+
+.jumbotron {
+    text-align: center; 
+    background-color: white;
+    } 
+    
+body {
+   text-align: center; 
+   font-size: 18px; 
+   font-family: 'Open sans', sans-serif;
+   line-height: 1;
+   width: 800px;
+   height: 1125px;
+   margin: 0px auto;
+   background-origin: padding-box;
+}
+
+header {
+   text-align: center; 
+   font-family: 'Open sans', sans-serif; 
+   color: black;
+   font-size: 30px; 
+}
+
+h2 {
+   text-align:center; 
+   font-family: 'Open sans', sans-serif; 
+   color: black;
+   font-size: 28px; 
+}
+
+#formContents{
+   margin: 0px auto;
+   border: 2px solid #DFF8FA;
+   width: 800px;
+   height: 900px;
+   background-color: #DFF8FA;
+   opacity: 0.75;
+}
+
+fieldset {
+   text-align: left; 
+   font-family: 'Open sans', sans-serif; 
+   color: black;
+   font-size: 20px;  
+   padding-left: 25px;
+}
+
+legend {
+  color: black;
+  /*padding-right: 2px;*/
+  border-bottom: 1px solid white;
+}
+
+#submitBtn {
+    background-color: #6C604D;
+    border-radius: 10px;
+    width: 150px;
+    height: 70px;
+    font-size: 25px;
+    text-align: center;
+}
+
+#usernameCheck, #passwordCheck, #zipError {
+    color: red;
+    font-size: 18px;
+}
+
+#footer_image {
+  width: 240px;
+  height: 80px;
+  text-align: center;
+}
+
+footer {
+    position: absolute;
+    top: 1200px;
+    padding-left: 70px;
+    font-size: 14px;
+    color: white;
+}
+
+h6 {
+    color: red;
+}
