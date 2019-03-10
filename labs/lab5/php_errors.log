@@ -1,0 +1,15 @@
+[10-Mar-2019 02:40:03 UTC] PHP Warning:  str_shuffle() expects parameter 1 to be string, array given in /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php on line 21
+[10-Mar-2019 02:40:03 UTC] PHP Stack trace:
+[10-Mar-2019 02:40:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php:0
+[10-Mar-2019 02:40:03 UTC] PHP   2. str_shuffle() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php:21
+[10-Mar-2019 02:42:16 UTC] PHP Warning:  str_shuffle() expects parameter 1 to be string, array given in /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php on line 40
+[10-Mar-2019 02:42:16 UTC] PHP Stack trace:
+[10-Mar-2019 02:42:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php:0
+[10-Mar-2019 02:42:16 UTC] PHP   2. str_shuffle() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php:40
+[10-Mar-2019 02:59:39 UTC] PHP Fatal error:  Call to undefined function val() in /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php on line 5
+[10-Mar-2019 02:59:39 UTC] PHP Stack trace:
+[10-Mar-2019 02:59:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php:0
+[10-Mar-2019 03:02:15 UTC] PHP Warning:  Wrong parameter count for intval() in /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php on line 5
+[10-Mar-2019 03:02:15 UTC] PHP Stack trace:
+[10-Mar-2019 03:02:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php:0
+[10-Mar-2019 03:02:15 UTC] PHP   2. intval() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php:5

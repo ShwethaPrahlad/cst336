@@ -2,40 +2,29 @@
 <html>
 <head>
 <title> Sign Up Page </title>
-</head>
-<body>
-    <fieldset>
-        <legend>
-            Sign Up
-        </legend>
-        First Name: <input type = "text" id = "firstName" name = "firstName"/> <br>
-        Last Name: <input type = "text" id = "lastName" name = "lastName"/><br>
-        
-        Username: <input type = "text" id = "username1" name = "username1"/><br>
-        <span id = "username1Error"/><br>
-        
-        Username: <input type = "text" id = "username2" name = "username2"/><br>
-        <span id = "username2Error"/><br>
-        
-        Password: <input type = "password" id = "password" name = "password"/><br>
-        <span id = "passwordError"/><br>
-        
-        <button id = "signUpBtn">Sign Up!</button>
-       
-    </fieldset>
-</body>
-<script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href= "styles/styles.css">
+ <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script>
    
   $(document).ready( function(){
       
       $("#username1").on("change", function() {
         $.ajax({
               type: "GET",
-                url: "checkUsername_text.php",
-                dataType: "json",
+                url: "api/checkUsername_text.php",
                 data: { "username": $("#username1").val() },
                 success: function(data,status) {
-                  $("#usernameError").html("Username is available!");
+                  if(data === "Available!"){
+                                $("#username1Error").html("Username is available!");
+                                $("#username1Error").css("color", "green");
+                            }
+                            else {
+                                $("#username1Error").html("Username is unavailable!");
+                                $("#username1Error").css("color", "red");
+                            }
                 },
                 complete: function(data,status) { //optional, used for debugging purposes
                 //alert(status);
@@ -45,25 +34,113 @@
       }); //username1
         
         $("#username2").on("change", function() {
-        $.ajax({
+          $.ajax({
               type: "GET",
-                url: "checkUsername_json.php",
+                url: "api/checkUsername_json.php",
                 dataType: "json",
                 data: { "username": $("#username2").val() },
                 success: function(data,status) {
-                  
-                  $("#usernameError").html("Username is available");
-                 
-                
+                 //alert(data.available)
+                   if(data.available){
+                                $("#username2Error").html("Username is available!");
+                                $("#username2Error").css("color", "green");
+                            }
+                            else {
+                                $("#username2Error").html("Username is unavailable!");
+                                $("#username2Error").css("color", "red");
+                            }
                 },
                 complete: function(data,status) { //optional, used for debugging purposes
                 //alert(status);
                 }
-        }); //ajax
                 
-    }); //username2
-            
-      
+          }); //ajax
+                
+        }); //username2
+    
+        $("#password").on("click", function(){
+
+          $.ajax({
+              type: "GET",
+                url: "api/strongPasswordAPI.php",
+               // data: { "password": $("#password").val() },
+                datatype: "json",
+               // data: { "length": "10" },
+                success: function(data,status) {
+               var suggestPwd = data.substring(17, 27);
+               //var suggestPwd = data.suggestedPwd;
+               $("#passwordError").html("Suggested Password: " + suggestPwd);
+                },
+                complete: function(data,status) { //optional, used for debugging purposes
+                //alert(status);
+                }
+          }); //ajax
+ 
+        }); //Strong Password Check
+        
+        $("#password").on("change", function(){
+
+          $.ajax({
+              type: "GET",
+                url: "api/validateUsernameAPI.php",
+               // data: { "password": $("#password").val() },
+                datatype: "json",
+                data: {"username" : $("#username1").val(), 
+                       "password" : $("#password").val()},
+                success: function(data,status) {
+                  if (data.substring(12,16) === "true"){
+                  $("#passwordError").html("Strong password");
+                  }
+                  else{
+                   $("#passwordError").html("Password must not contain username");   
+                  }
+                },
+                complete: function(data,status) { //optional, used for debugging purposes
+                //alert(status);
+                }
+          }); //ajax
+ 
+        }); //Password Validation, does not contain username
+        
+        $("#signUpBtn").on("click", function(){
+          
+          if ($("#username1").val() == "" || $("#username2").val() == "" || $("#password").val() == ""){
+           $("#signedUp").html("Please enter both username and password");
+          }
+          else {
+            $("#signedUp").html("You have signed up successfully!");
+          }
+        }); // Sign Up and Submit
+        
   });
   
 </script>
+</head>
+<header>
+   <div id = "header">
+    Sign Up Form 
+   </div>
+ </header>
+<body>
+<div id = "formElements" class = jumbotron>
+    <fieldset>
+        <!--<legend>Sign Up</legend>-->
+        First Name: <input type = "text" id = "firstName" name = "firstName"/><br><br>
+        Last Name: <input type = "text" id = "lastName" name = "lastName"/><br><br>
+        Username: <input type = "text" id = "username1" name = "username1"/><span id = "username1Error"></span><br><br>
+        Username: <input type = "text" id = "username2" name = "username2"/><span id = "username2Error"></span><br><br>
+        Password: <input type = "password" id = "password" name = "password"/><span id = "passwordError"></span><br><br><br><br>
+        <button id = "signUpBtn">Sign Up!</button> <br><br>
+        <h3 id = "signedUp"></h3>
+    </fieldset>
+</div>
+ </body>
+ <footer>
+        <div id = "footerDiv">
+        &copy; 2019 Shwetha Prahlad, CST 336 Internet Programming.<br/>
+        Disclaimer: The content on this web page is fictitious. It represents information only for academic purposes.<br/><br/>
+          <div id = "logo">
+               <img src = "../../images/CSUMB_Logo.png" id = "footer_image"/>
+          </div>
+        </div>
+ </footer>
