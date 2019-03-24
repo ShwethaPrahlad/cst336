@@ -13,3 +13,47 @@
 [10-Mar-2019 03:02:15 UTC] PHP Stack trace:
 [10-Mar-2019 03:02:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php:0
 [10-Mar-2019 03:02:15 UTC] PHP   2. intval() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php:5
+[10-Mar-2019 08:35:13 UTC] PHP Warning:  Wrong parameter count for intval() in /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php on line 15
+[10-Mar-2019 08:35:14 UTC] PHP Stack trace:
+[10-Mar-2019 08:35:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php:0
+[10-Mar-2019 08:35:14 UTC] PHP   2. intval() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php:15
+[10-Mar-2019 08:35:14 UTC] PHP Warning:  Wrong parameter count for intval() in /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php on line 15
+[10-Mar-2019 08:35:14 UTC] PHP Stack trace:
+[10-Mar-2019 08:35:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php:0
+[10-Mar-2019 08:35:14 UTC] PHP   2. intval() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php:15
+[10-Mar-2019 08:35:14 UTC] PHP Warning:  Wrong parameter count for intval() in /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php on line 15
+[10-Mar-2019 08:35:14 UTC] PHP Stack trace:
+[10-Mar-2019 08:35:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php:0
+[10-Mar-2019 08:35:14 UTC] PHP   2. intval() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php:15
+[10-Mar-2019 08:35:14 UTC] PHP Warning:  Wrong parameter count for intval() in /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php on line 15
+[10-Mar-2019 08:35:14 UTC] PHP Stack trace:
+[10-Mar-2019 08:35:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php:0
+[10-Mar-2019 08:35:14 UTC] PHP   2. intval() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php:15
+[10-Mar-2019 08:35:14 UTC] PHP Warning:  Wrong parameter count for intval() in /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php on line 15
+[10-Mar-2019 08:35:14 UTC] PHP Stack trace:
+[10-Mar-2019 08:35:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php:0
+[10-Mar-2019 08:35:14 UTC] PHP   2. intval() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php:15
+[10-Mar-2019 08:35:14 UTC] PHP Warning:  Wrong parameter count for intval() in /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php on line 15
+[10-Mar-2019 08:35:14 UTC] PHP Stack trace:
+[10-Mar-2019 08:35:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php:0
+[10-Mar-2019 08:35:14 UTC] PHP   2. intval() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php:15
+[10-Mar-2019 08:35:14 UTC] PHP Warning:  Wrong parameter count for intval() in /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php on line 15
+[10-Mar-2019 08:35:14 UTC] PHP Stack trace:
+[10-Mar-2019 08:35:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php:0
+[10-Mar-2019 08:35:14 UTC] PHP   2. intval() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php:15
+[10-Mar-2019 08:35:14 UTC] PHP Warning:  Wrong parameter count for intval() in /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php on line 15
+[10-Mar-2019 08:35:14 UTC] PHP Stack trace:
+[10-Mar-2019 08:35:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php:0
+[10-Mar-2019 08:35:14 UTC] PHP   2. intval() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php:15
+[10-Mar-2019 08:35:14 UTC] PHP Warning:  Wrong parameter count for intval() in /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php on line 15
+[10-Mar-2019 08:35:14 UTC] PHP Stack trace:
+[10-Mar-2019 08:35:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php:0
+[10-Mar-2019 08:35:14 UTC] PHP   2. intval() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php:15
+[10-Mar-2019 08:35:14 UTC] PHP Warning:  Wrong parameter count for intval() in /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php on line 15
+[10-Mar-2019 08:35:14 UTC] PHP Stack trace:
+[10-Mar-2019 08:35:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php:0
+[10-Mar-2019 08:35:14 UTC] PHP   2. intval() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php:15
+[10-Mar-2019 08:35:14 UTC] PHP Warning:  Wrong parameter count for intval() in /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php on line 15
+[10-Mar-2019 08:35:14 UTC] PHP Stack trace:
+[10-Mar-2019 08:35:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php:0
+[10-Mar-2019 08:35:14 UTC] PHP   2. intval() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPasswordAPI.php:15

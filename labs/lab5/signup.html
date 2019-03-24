@@ -65,10 +65,9 @@
                 url: "api/strongPasswordAPI.php",
                // data: { "password": $("#password").val() },
                 datatype: "json",
-               // data: { "length": "10" },
-                success: function(data,status) {
+              // data: { "length": "10" },
+               success: function(data,status) {
                var suggestPwd = data.substring(17, 27);
-               //var suggestPwd = data.suggestedPwd;
                $("#passwordError").html("Suggested Password: " + suggestPwd);
                $("#passwordError").css("color", "blue");
                 },
@@ -86,8 +85,8 @@
                 url: "api/validateUsernameAPI.php",
                // data: { "password": $("#password").val() },
                 datatype: "json",
-                data: {"username" : $("#username1").val(), 
-                       "password" : $("#password").val()},
+                data: {"username": $("#username1").val(), 
+                       "password": $("#password").val()},
                 success: function(data,status) {
                   if(data.substring(12,16) == "true"){
                   $("#passwordError").html("Strong password");

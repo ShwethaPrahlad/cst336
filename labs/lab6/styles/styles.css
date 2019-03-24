@@ -1,0 +1,72 @@
+html{
+   background-color: white;
+}
+body{
+   text-align: center; 
+   line-height: 1;
+   margin: 0 0;
+   font-size: 18px; 
+   font-family: 'Open sans', sans-serif;
+   width: 1400px;
+   height: 1500px;
+   padding-left: 25px;
+}
+
+#formElements{
+    text-align: center;
+    width: 1358px;
+    margin: 0 auto;
+    background-color: #A4C8CA;
+    border-color: #A4C8CA;
+}
+
+#techImage1, #techImage2 , #techImage3 {
+    width: 450px;
+    height: 300px;
+}
+
+.jumbotron {
+    background-color: #A4C8CA;
+    }
+    
+.row {
+    display: flex;
+    margin: 1px auto;
+}    
+ 
+.col1 { 
+    width: 250px; 
+}
+.col2 { 
+    width: 250px; 
+}
+.col3 { 
+    width: 250px; 
+}
+
+#productImage{
+    width: 70px;
+    height: 80px;
+}
+
+#products{
+    padding-top: 20px;
+    text-align: center;
+    margin: 0 auto;
+    padding-left: 330px;
+}
+
+#footer_image {
+  width: 240px;
+  height: 80px;
+  text-align: center;
+}
+
+footer {
+    text-align: center;
+    position: absolute;
+    top: 2000px;
+    padding-left: 370px;
+    font-size: 14px;
+    color: black;
+}
