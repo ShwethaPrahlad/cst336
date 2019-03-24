@@ -12,8 +12,13 @@ $namedParameters = array();
 $sql = "SELECT * FROM `om_product` WHERE 1"; //Retrieves ALL records
 
 if (!empty($_GET['product'])) { //user entered a product keyword
-    $sql.= " AND productName LIKE :productName OR productDescription LIKE :productName";
+    $sql.= " AND (productName LIKE :productName OR productDescription LIKE :productName)";
     $namedParameters[":productName"] = "%".$_GET['product']."%";
+} 
+
+if (!empty($_GET['productName'])) { //user entered a product name
+    $sql.= " AND productName = :productName";
+    $namedParameters[":productName"] = $_GET['productName'];
 } 
 
 if (!empty($_GET['category'])) { //user entered a category
