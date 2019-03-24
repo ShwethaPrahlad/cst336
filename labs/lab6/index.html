@@ -64,12 +64,12 @@
                      },
                     success: function(data, status) {
                            $("#results").html("<h3> Products Found: </h3>");
-                           $("#prodImage").html("");
                            data.forEach(function(key){
                             $("#results").append("<a href='#' class='imageLink'>" + key['productName'] + "</a>" + " " +  key['productDescription'] + " $" + key['productPrice'] );
                             $("#results").append("<a href='#' class='historyLink' id='" + key['productId'] + "'> See Purchase History</a> " + "<br>");
-                            $("#prodImage").append("<img src='" + key['productImage'] + "' width='200' />" + "<br/>");
+                            $("#prodImage").html("<img src='" + key['productImage'] + "' width='200' /> <br/>");
                             $("#prodImage").append(key['productName']);
+                            
                            });
                     }
                 
@@ -78,8 +78,9 @@
               }); //search form 
               
                $(document).on( "click", ".imageLink", function() {
-                 $("#imageModal").modal("show");    
-              });
+                    $("#imageModal").modal("show");    
+               });
+              
               
               $(document).on( "click", ".historyLink", function() {
                $("#purchaseHistoryModal").modal("show");

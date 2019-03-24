@@ -1,6 +1,10 @@
 html{
    background-color: white;
 }
+
+h1, h3{
+    text-align: center; 
+}
 body{
    text-align: center; 
    line-height: 1;
