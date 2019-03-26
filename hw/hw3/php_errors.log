@@ -1,0 +1,37 @@
+[26-Mar-2019 21:15:58 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/ubuntu/workspace/cst336/hw/hw3/api/getResponse.php on line 19
+[26-Mar-2019 21:15:58 UTC] PHP Stack trace:
+[26-Mar-2019 21:15:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/hw/hw3/api/getResponse.php:0
+[26-Mar-2019 21:15:58 UTC] PHP   2. in_array() /home/ubuntu/workspace/cst336/hw/hw3/api/getResponse.php:19
+[26-Mar-2019 21:15:58 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/ubuntu/workspace/cst336/hw/hw3/api/getResponse.php on line 32
+[26-Mar-2019 21:15:58 UTC] PHP Stack trace:
+[26-Mar-2019 21:15:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/hw/hw3/api/getResponse.php:0
+[26-Mar-2019 21:15:58 UTC] PHP   2. in_array() /home/ubuntu/workspace/cst336/hw/hw3/api/getResponse.php:32
+[26-Mar-2019 21:15:58 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/ubuntu/workspace/cst336/hw/hw3/api/getResponse.php on line 45
+[26-Mar-2019 21:15:58 UTC] PHP Stack trace:
+[26-Mar-2019 21:15:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/hw/hw3/api/getResponse.php:0
+[26-Mar-2019 21:15:58 UTC] PHP   2. in_array() /home/ubuntu/workspace/cst336/hw/hw3/api/getResponse.php:45
+[26-Mar-2019 21:16:08 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/ubuntu/workspace/cst336/hw/hw3/api/getResponse.php on line 19
+[26-Mar-2019 21:16:08 UTC] PHP Stack trace:
+[26-Mar-2019 21:16:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/hw/hw3/api/getResponse.php:0
+[26-Mar-2019 21:16:08 UTC] PHP   2. in_array() /home/ubuntu/workspace/cst336/hw/hw3/api/getResponse.php:19
+[26-Mar-2019 21:16:08 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/ubuntu/workspace/cst336/hw/hw3/api/getResponse.php on line 32
+[26-Mar-2019 21:16:08 UTC] PHP Stack trace:
+[26-Mar-2019 21:16:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/hw/hw3/api/getResponse.php:0
+[26-Mar-2019 21:16:08 UTC] PHP   2. in_array() /home/ubuntu/workspace/cst336/hw/hw3/api/getResponse.php:32
+[26-Mar-2019 21:16:08 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/ubuntu/workspace/cst336/hw/hw3/api/getResponse.php on line 45
+[26-Mar-2019 21:16:08 UTC] PHP Stack trace:
+[26-Mar-2019 21:16:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/hw/hw3/api/getResponse.php:0
+[26-Mar-2019 21:16:08 UTC] PHP   2. in_array() /home/ubuntu/workspace/cst336/hw/hw3/api/getResponse.php:45
+[26-Mar-2019 21:23:44 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/ubuntu/workspace/cst336/hw/hw3/api/getResponse.php on line 19
+[26-Mar-2019 21:23:44 UTC] PHP Stack trace:
+[26-Mar-2019 21:23:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/hw/hw3/api/getResponse.php:0
+[26-Mar-2019 21:23:44 UTC] PHP   2. in_array() /home/ubuntu/workspace/cst336/hw/hw3/api/getResponse.php:19
+[26-Mar-2019 21:23:44 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/ubuntu/workspace/cst336/hw/hw3/api/getResponse.php on line 32
+[26-Mar-2019 21:23:44 UTC] PHP Stack trace:
+[26-Mar-2019 21:23:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/hw/hw3/api/getResponse.php:0
+[26-Mar-2019 21:23:44 UTC] PHP   2. in_array() /home/ubuntu/workspace/cst336/hw/hw3/api/getResponse.php:32
+[26-Mar-2019 21:23:44 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/ubuntu/workspace/cst336/hw/hw3/api/getResponse.php on line 45
+[26-Mar-2019 21:23:44 UTC] PHP Stack trace:
+[26-Mar-2019 21:23:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/hw/hw3/api/getResponse.php:0
+[26-Mar-2019 21:23:44 UTC] PHP   2. in_array() /home/ubuntu/workspace/cst336/hw/hw3/api/getResponse.php:45
+[26-Mar-2019 21:27:43 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/ubuntu/workspace/cst336/hw/hw3/api/getResponse.php on line 45

@@ -1,0 +1,4 @@
+[25-Mar-2019 20:09:59 UTC] PHP Warning:  rand() expects parameter 2 to be long, string given in /home/ubuntu/workspace/cst336/practice/practice7/api/getProducts.php on line 18
+[25-Mar-2019 20:09:59 UTC] PHP Stack trace:
+[25-Mar-2019 20:09:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/practice/practice7/api/getProducts.php:0
+[25-Mar-2019 20:09:59 UTC] PHP   2. rand() /home/ubuntu/workspace/cst336/practice/practice7/api/getProducts.php:18

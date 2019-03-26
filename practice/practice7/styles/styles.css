@@ -1,0 +1,35 @@
+html{
+    background-color: cyan;
+}
+body{
+   text-align: center;    
+   margin: 0 auto; 
+}
+
+th{
+   width: 30px;
+   height: 30px;
+   margin: 0 auto;
+   border: 2px;
+}
+td{
+    width: 30px;
+   height: 30px;
+   margin: 0 auto;
+   border: 2px;
+}
+
+#footer_image {
+  width: 240px;
+  height: 80px;
+  text-align: center;
+}
+
+footer {
+    text-align: center;
+    position: relative;
+    top: 500px;
+    padding-left: 370px;
+    font-size: 14px;
+    color: black;
+}

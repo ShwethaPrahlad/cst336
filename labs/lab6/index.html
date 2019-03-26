@@ -66,8 +66,12 @@
                     success: function(data, status) {
                         $("#results").html("<h3> Products Found: </h3>");
                         data.forEach(function(key) {
-                            $("#results").append("<a href='#' class='imageLink' title='"+ key['productName']+ "'>" + key['productName'] + "</a>" + " " + key['productDescription'] + " $" + key['productPrice']);
-                            $("#results").append("<a href='#' class='historyLink' id='" + key['productId'] + "'> See Purchase History</a> " + "<br>");
+                            $("#results").append("<div class='row'>" +
+                                                 "<div class='col1'>" + "<a href='#' class='imageLink' title='"+ key['productName']+ "'>" + key['productName'] + "</a>" + "</div>" +
+                                                 "<div class='col2'>"+ key['productDescription'] + "</div>" +
+                                                 "<div class='col3'>" + " $" + key['productPrice'] + "</div>");
+                            $("#results").append("<div class='col4'>"+ "<a href='#' class='historyLink' id='" + key['productId'] + "'> See Purchase History</a> " + 
+                                                 "</div>" + "</div>" + "<br/>" + "<br/>");
 
                             //$("#prodImage").append("<img src='" + key['productImage'] + "' width='200' /> <br/>");
                             //$("#prodImage").append(key['productName']);
