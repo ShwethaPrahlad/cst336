@@ -13,21 +13,19 @@
     <script>
         $(document).ready(function() {
             
-
             $("#scenario1").on("change", function() {
                 $.ajax({
  
                     type: "GET",
                     url: "api/validateUsageRights.php",
                     dataType: "json",
-                    data: {
-                        "scenario": $("[name=scenarioOne]").val()
+                    data: { "scenario": $("[name=scenarioOne]").val()
                     },
                     success: function(data, status) {
                         alert(data.available);
                         //-------Scenario 1----------
                         if (data.available == true) {
-                            $("#hint2").html("");
+                            $("#hint2").html("Perfect spelling");
                         }
                         else {
                             $("#hint2").html("Please remove any unnecessary spaces and make sure that you have spelled your response correctly.");
@@ -48,10 +46,13 @@
                     && $("#checkboxOption4").is(":checked") == false && $("#checkboxOption6").is(":checked") == false)
                     {
                      $("#feedback1").html("That's the perfect response!");
+                     $("#feedback1").css("color", "green");
                     } 
                     else{
                      $("#feedback1").html("Please check your response once again.");  
+                     $("#feedback1").css("color", "red");
                      $("#hint1").html("Revise through the material and check the tools section on Google Search to verify your answer.");
+                     $("#hint1").css("color", "blue")
                      $("#hint1").append("<br>" + "<img src = '../img/tools.png'/>");
                     }  
                         
@@ -62,8 +63,8 @@
                     dataType: "json",
                     data: {
                         "scenarioOne": $("[name:scenarioOne]").val(),
-                        "scenarioTwo": $("[name:scenarioTwo").val(),
-                        "scenarioThree": $("[name:scenarioThree").val()
+                        "scenarioTwo": $("[name:scenarioTwo]").val(),
+                        "scenarioThree": $("[name:scenarioThree]").val()
                     },
                     success: function(data, status) {
                     alert(data[0].correct);
@@ -95,7 +96,7 @@
                             
                         }
                      //-------Scenario 3---------- 
-                        if (data[2].correct) {
+                        if (data[2].correct == true) {
                             $("#feedback4").html("That's the perfect response!");
                             $("#feedback4").css("color", "green");
                         }
@@ -106,9 +107,11 @@
                             $("#hint4").css("color", "blue");
                         }
 
-                    }//success
-
-                }); //ajax
+                    }, //success
+                    complete: function(data, status) {
+                      alert(status);
+                    }
+                }); //Get response ajax
                 
 
             }); // submit
