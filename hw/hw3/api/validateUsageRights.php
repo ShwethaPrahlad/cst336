@@ -7,10 +7,11 @@ header('Access-Control-Allow-Origin: *');
 //******
 
 $usageRights = array("labeled for reuse with modification", "labeled for reuse", "labeled for noncommercial reuse with modification", "labeled for noncommercial reuse", "not filtered by license");
-
-print_r($_GET['scenario']);
+$scenario = $_GET['scenario']; 
+print_r($scenario);
 
 $usageRightChosen = array();
+
 if(in_array(strtolower($_GET['scenario']), $usageRights)) {
     $usageRightChosen['available'] = false;
 }

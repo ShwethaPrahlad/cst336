@@ -1,10 +1,10 @@
 <html>
-
 <head>
     <title>Google Images Usage Rights Knowledge Check</title>
 
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -15,16 +15,16 @@
             
             $("#scenario1").on("change", function() {
                 $.ajax({
- 
                     type: "GET",
                     url: "api/validateUsageRights.php",
                     dataType: "json",
-                    data: { "scenario": $("[name=scenarioOne]").val()
+                    data: { 
+                        "scenario": $("[name=scenario1]").val() 
                     },
                     success: function(data, status) {
-                        alert(data.available);
+                        alert(data[0].available);
                         //-------Scenario 1----------
-                        if (data.available == true) {
+                        if (data[0].available === true) {
                             $("#hint2").html("Perfect spelling");
                         }
                         else {
@@ -39,80 +39,78 @@
             });// on change    
                 
                 $("#submit").on("click", function() {
+               
                     
                 //--------Question 1----------
-                 if ($("#checkboxOption1").is(":checked") == true && $("#checkboxOption5").is(":checked") == true 
-                    && $("#checkboxOption2").is(":checked") == false && $("#checkboxOption3").is(":checked") == false 
-                    && $("#checkboxOption4").is(":checked") == false && $("#checkboxOption6").is(":checked") == false)
+                 if ($("#checkboxOption1").is(":checked") === true && $("#checkboxOption5").is(":checked") === true && $("#checkboxOption2").is(":checked") === false && $("#checkboxOption3").is(":checked") === false && $("#checkboxOption4").is(":checked") === false && $("#checkboxOption6").is(":checked") === false && $("#checkboxOption7").is(":checked") === false )
                     {
+                    // alert("entered if checkbox");    
                      $("#feedback1").html("That's the perfect response!");
                      $("#feedback1").css("color", "green");
+                     //alert("end if checkbox");  
                     } 
-                    else{
+                else{
+                     //alert("else condition");  
                      $("#feedback1").html("Please check your response once again.");  
                      $("#feedback1").css("color", "red");
-                     $("#hint1").html("Revise through the material and check the tools section on Google Search to verify your answer.");
-                     $("#hint1").css("color", "blue")
-                     $("#hint1").append("<br>" + "<img src = '../img/tools.png'/>");
+                     $("#hint1").html("Hint: Revise through the material and check the tools section on Google Search to verify your answer. The tools section looks like the image below, click on the Usage rights filter.");
+                     $("#hint1").css("color", "blue");
+                     $("#hint1").append("<br>" + "<img src = 'img/tools.png'/>" + "<br>");
                     }  
                         
-                  $.ajax({
-
+                 $.ajax({
                     type: "GET",
                     url: "api/getResponse.php",
                     dataType: "json",
-                    data: {
-                        "scenarioOne": $("[name:scenarioOne]").val(),
-                        "scenarioTwo": $("[name:scenarioTwo]").val(),
-                        "scenarioThree": $("[name:scenarioThree]").val()
+                    data: { "scenario1": $("[name=scenario1]").val(), "scenario2": $("[name=scenario2]").val(), "scenario3": $("[name=scenario3]").val()
                     },
                     success: function(data, status) {
-                    alert(data[0].correct);
+                    //alert(data[0].correct);
                         
                         
                     //-------Question 2---------
                      //-------Scenario 1----------
-                        if (data[0].correct == true) {
+                        if (data[0].correct === true) {
                             $("#feedback2").html("That's the perfect response!");
                             $("#feedback2").css("color", "green");
                         }
                         else {
                             $("#feedback2").html("Please check your response once again.");
                             $("#feedback2").css("color", "red");
-                            $("#hint2").html("Evaluate the situation again. You are downloading the images and using them again in your classroom without changing the images. You will not be using it for any sort of sale or profit.");
+                            $("#hint2").html("Hint: Evaluate the situation again. You are downloading the images and using them again in your classroom without changing the images. You will not be using it for any sort of sale or profit.");
                             $("#hint2").css("color", "blue");
                             
                         }
                      //-------Scenario 2---------- 
-                        if (data[1].correct == true) {
+                        if (data[1].correct === true) {
                             $("#feedback3").html("That's the perfect response!");
                             $("#feedback3").css("color", "green");
                         }
                         else {
                             $("#feedback3").html("Please check your response once again.");
                             $("#feedback3").css("color", "red");
-                            $("#hint3").html("Evaluate the situation again. Although did not make changes to the images, you cannot be sure if the other teachers would like to modify it. The teachers plan to use it for their classroom and will not be using it for any sort of sale or profit.");
+                            $("#hint3").html("Hint: Evaluate the situation again. Although did not make changes to the images, you cannot be sure if the other teachers would like to modify it. The teachers plan to use it for their classroom and will not be using it for any sort of sale or profit.");
                             $("#hint3").css("color", "blue");
                             
                         }
                      //-------Scenario 3---------- 
-                        if (data[2].correct == true) {
+                        if (data[2].correct === true) {
                             $("#feedback4").html("That's the perfect response!");
                             $("#feedback4").css("color", "green");
                         }
                         else {
                             $("#feedback4").html("Please check your response once again.");
                             $("#feedback4").css("color", "red");
-                            $("#hint4").html("Evaluate the situation again. You will need to make changes and adapt images to suit the lesson better. Although you will be creating this module for free for your district, you plan on selling it to other districts.");
+                            $("#hint4").html("Hint: Evaluate the situation again. You will need to make changes and adapt images to suit the lesson better. Although you will be creating this module for free for your district, you plan on selling it to other districts.");
                             $("#hint4").css("color", "blue");
                         }
 
                     }, //success
                     complete: function(data, status) {
-                      alert(status);
+                     // alert(status);
                     }
-                }); //Get response ajax
-                
+                }); //Get response ajax 
+            
 
             }); // submit
 
@@ -121,57 +119,55 @@
 </head>
 
 <body>
-    <h5>
-        <form id="formElements" class="jumbotron" method="get">
+    <div id="formElements" class="jumbotron">
+        <form method="get">
             <h1>Google Images Usage Rights Knowledge Check</h1><br> 1. Which of these Usage Rights are not applicable for images available on Google?<br>
             <input type="checkbox" id="checkboxOption1" name="checkbox" value="Labeled for download"><label for="checkboxOption1">Labeled for download</label><br>
             <input type="checkbox" id="checkboxOption2" name="checkbox" value="Labeled for reuse with modification"><label for="checkboxOption2">Labeled for reuse with modification</label><br>
             <input type="checkbox" id="checkboxOption3" name="checkbox" value="Labeled for reuse"><label for="checkboxOption3">Labeled for reuse</label><br>
             <input type="checkbox" id="checkboxOption4" name="checkbox" value="Labeled for noncommercial reuse"><label for="checkboxOption4">Labeled for non-commercial reuse</label><br>
             <input type="checkbox" id="checkboxOption5" name="checkbox" value="Labeled for modification"><label for="checkboxOption5">Labeled for modification</label><br>
-            <input type="checkbox" id="checkboxOption6" name="checkbox" value="Labeled for noncommercial reuse with modification"><label for="checkboxOption6">
-                Labeled for non-commercial reuse with modification</label><br>
-             <input type="checkbox" id="checkboxOption6" name="checkbox" value="Not filtered by license"><label for="checkboxOption6">
-                Not filtered by license</label><br>
-             <span id = "hint1"></span><br>
-            <div id="feedback1"></div>
+            <input type="checkbox" id="checkboxOption6" name="checkbox" value="Labeled for noncommercial reuse with modification"><label for="checkboxOption6">Labeled for non-commercial reuse with modification</label><br>
+            <input type="checkbox" id="checkboxOption7" name="checkbox" value="Not filtered by license"><label for="checkboxOption7">Not filtered by license</label><br>
+            <br><div id="feedback1"></div><br>
+            <div id="hint1"></div>
+            
             
             <br><br> 2. What usage rights would be applicable for the following scenarios?
             <br><br>Scenario 1:<br> You are a science teacher for a Grade 5 classroom with 20 students. The activity for students for this week's assignment is to to construct a model for water cycle using styrofoam sheets and craft paper. You are looking
             for images of the water cycle and the materials to show them exactly what they should look like. You would have to download these images from the computer lab and project them in your classroom. What is the applicable usage right for those
             images?<br>(Note: You are not expected to remember the exact usage rights from Google Search tools, refer the options from the question above.)
-            <br><br><input type="text" size="50" id="scenario1" name="scenarioOne"/>
-            <span id = "hint2"></span><br>
-            <div id="feedback2"></div>
+            <br><br><input type="text" size="50" id="scenario1" name="scenario1"/>
+            <br><div id="feedback2"></div><br>
+            <div id="hint2"></div>
             
             <br><br>Scenario 2:<br> You are a Social Science teacher for a Grade 4 classroom. You had prepared an amazing chart with images about the Monuments of India for your classroom. The principal visits your classroom to discuss some important
             changes in the curriculum. She gets amazed by the pictures in the chart and requests you to share them with the other Grade 4 Social Science teachers from your district. These teachers plan touse it just in their classroom. They might use the images as is or might modify them to suit
             their lesson. What usage right must be applicable to be able to share these images?
-            <br><select id="scenario2" name="scenarioTwo">
+            <br><select id="scenario2" name="scenario2">
                 <option>Select One</option>
                 <option>Labeled for reuse with modification</option>
                 <option>Labeled for noncommercial reuse with modification</option>
                 <option>Not filtered by license</option>
                 </select><br>
-            <span id = "hint3"></span><br>    
-            <div id="feedback3"></div>
-            
+            <br><div id="feedback3"></div><br>    
+            <div id="hint3"></div>
             
             <br><br>Scenario 3:<br> You are a Computer Science and Technology teacher who is creating an e-learning module for teachers in your district. You are downloading pictures from Google and intend to adapt the images to suit the material. This
             e-learning module will be sold to other districts with a minimal fee. Which usage rights must be applicable for being able to share these images for the e-learning module?
-            <br><select id="scenario3" name="scenarioThree" >
+            <br><select id="scenario3" name="scenario3" >
                 <option>Select One</option>
                 <option>Labeled for reuse with modification</option>
                 <option>Labeled for noncommercial reuse with modification</option>
                 <option>Labeled for reuse</option>
                 <option>Labeled for noncommercial reuse</option>
                 </select><br><br>
-            <span id = "hint4"></span><br>      
-            <div id="feedback4"></div>
+            <br><div id="feedback4"></div><br>      
+            <div id="hint4"></div>
     <br><br>
-   <h3><button id="submit">Submit</button></h3><br>
-    </form>
-   </h5>    
+   </form>
+   <button id="submit">Submit</button><br>
+   </div>
 </body>
 <footer>
     <div id="footerDiv">
@@ -181,5 +177,4 @@
         </div>
     </div>
 </footer>
-
 </html>
