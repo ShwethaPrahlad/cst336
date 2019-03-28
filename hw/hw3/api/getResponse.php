@@ -29,7 +29,7 @@ else {
 
 $usageRightChosen2 = array();
 
-if($_GET['scetwo'] === $usageRights2) {
+if(strtolower($_GET['scetwo']) === $usageRights2) {
     $usageRightChosen2['correct'] = true;
 }
 else {
@@ -42,7 +42,7 @@ else {
 
 $usageRightChosen3 = array();
 
-if($_GET['scethree'] === $usageRights3) {
+if(strtolower($_GET['scethree']) === $usageRights3) {
     $usageRightChosen3['correct'] = true;
 }
 else {
