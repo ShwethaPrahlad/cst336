@@ -19,18 +19,21 @@
                     url: "api/validateUsageRights.php",
                     dataType: "json",
                     data: { 
-                        "scenario": $("[name=scenario1]").val() 
+                        "scenario": $("#scenario1").val() 
                     },
                     success: function(data, status) {
-                        alert(data[0].available);
+                        //alert(data.available);
                         //-------Scenario 1----------
-                        if (data[0].available === true) {
-                            $("#hint2").html("Perfect spelling");
+                        if (data.available === true) {
+                            $("#feedback2").html("");
+                            $("#hint2").html("");
                         }
                         else {
-                            $("#hint2").html("Please remove any unnecessary spaces and make sure that you have spelled your response correctly.");
+                            $("#feedback2").html("Invalid usage right type!");
+                            $("#feedback2").css("color", "red");
+                            $("#hint2").html("Please remove any unnecessary spaces and make sure that you spelled your response correctly.");
+                            $("#hint2").css("color", "blue")
                         }
-                        
 
                     }//success
 
@@ -62,12 +65,16 @@
                     type: "GET",
                     url: "api/getResponse.php",
                     dataType: "json",
-                    data: { "scenario1": $("[name=scenario1]").val(), "scenario2": $("[name=scenario2]").val(), "scenario3": $("[name=scenario3]").val()
+                    data: { 
+                           "sceone": $("#scenario1").val(), 
+                           "scetwo": $("#scenario2").val(), 
+                           "scethree": $("#scenario3").val()
                     },
                     success: function(data, status) {
-                    //alert(data[0].correct);
-                        
-                        
+                    alert("entered success loop");
+                    alert(data[0].correct);
+                    alert(data[1].correct);
+                    alert(data[2].correct);
                     //-------Question 2---------
                      //-------Scenario 1----------
                         if (data[0].correct === true) {
@@ -81,6 +88,7 @@
                             $("#hint2").css("color", "blue");
                             
                         }
+                    
                      //-------Scenario 2---------- 
                         if (data[1].correct === true) {
                             $("#feedback3").html("That's the perfect response!");
@@ -104,10 +112,10 @@
                             $("#hint4").html("Hint: Evaluate the situation again. You will need to make changes and adapt images to suit the lesson better. Although you will be creating this module for free for your district, you plan on selling it to other districts.");
                             $("#hint4").css("color", "blue");
                         }
-
+                     alert("end of success loop");
                     }, //success
                     complete: function(data, status) {
-                     // alert(status);
+                    //alert(status);
                     }
                 }); //Get response ajax 
             
