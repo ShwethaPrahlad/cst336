@@ -51,10 +51,12 @@
                            "catId": $("#catId").val()
                     },
                     success: function(data, status) {
-                    $("#updateMessage").html("Product has been updated");
-                
-                
-                    } //success
+                    //alert(data);
+                    $("#updateMessage").html("Product has been updated!");
+                    }, //success
+                    complete: function(data, status) {
+                    //alert(status);
+                    }
                     
                  }); //ajax
                  
@@ -77,7 +79,7 @@
         Categories Name: <select id = "catId">
         <option> Select One </option>
         </select><br>
-        <div id="updateMessage"></div><br>
         <button id="submitButton">Update Product</button><br>
+        <div id="updateMessage"></div><br>
     </body>
 </html>

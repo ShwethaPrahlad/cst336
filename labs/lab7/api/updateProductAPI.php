@@ -25,8 +25,10 @@ if (!isset($_SESSION['adminName'])) {
     $arr[":productPrice"] = $_GET["productPrice"];
     $arr[":catId"] = $_GET["catId"];
     
+    //print_r($arr);
+    
     $stmt = $conn->prepare($sql);
     $stmt->execute($arr);
-    
+    echo json_encode($arr);
     
 ?>
