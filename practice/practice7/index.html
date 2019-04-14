@@ -13,6 +13,15 @@
 
     <script>
         $(document).ready(function() {
+            var prodPrice= 0;
+         //   var prodPriceList = [""];
+            var prodQuantity= 0;
+            var promoDiscount= 0;
+            var totalPrice= 0;
+            var discountedTotal= 0;
+            var subtotal= 0;
+            var tax= 0;
+            var totalAfterTax= 0;
             $.ajax({
                 type: "GET",
                 url: "api/getRandomProduct.php",
@@ -20,13 +29,103 @@
                 success: function(data, status) {
                     //alert(data.productName);
                     $("#productName").html(data.productName);
-                    $("#productPrice").html(data.productPrice)
+                    $("#productPrice").html(data.productPrice);
+                    prodPrice= data.productPrice;
                 }
-            });
+            }); //AJAX Random product
+            
+            $.ajax({
+                type: "GET",
+                url: "api/getPromoCode.php",
+                dataType: "json",
+                success: function(data, status) {
+                //alert(data.promoCode);
+                $("#promoCodeDiv").append("<input type= 'text' id='promoCode' value='" + data.promoCode + "'/><br>");
+                $("#promoExpDateDiv").html("This promocode expires on " + data.expirationDate + "!");
+                $("#promoExpDateDiv").css("color", "red");
+                $("#discountValue").html(data.discount + "%");
+                promoDiscount = parseInt(data.discount, 10);
+                }
+            }); //AJAX Random Promo Code
 
             $("#productQuantity").on("change", function() {
-                $("#totalPrice").html(($("#productQuantity").val()) * ($("#productPrice"), val()));
-            });
+              
+              //Product Quantity and Price
+              prodQuantity = parseInt($("#prodQuantity").val(), 10);
+              prodPrice = parseInt(prodPrice, 10);
+
+              //Total Product Price
+              totalPrice = prodQuantity * prodPrice;
+              $("#totalPrice").html(totalPrice);
+              
+              //Total Price After Discount
+              discountedTotal = totalPrice - ((promoDiscount/100) * totalPrice);
+              $("#discountedTotal").html(discountedTotal);
+              
+              //Total Price After Round Off
+              subtotal = Math.trunc(discountedTotal);
+              $("#subtotalValue").html(subtotal); 
+              
+              //Tax
+              tax = (0.1 * subtotal );
+              $("#taxValue").html(tax);
+              
+              //Total Price after tax
+              totalAfterTax = subtotal + tax;
+              $("#totalAfterTax").html(totalAfterTax);
+              
+            }); //Total price computation for Random product
+            
+            $.ajax({
+                type: "GET",
+                url: "api/getProductList.php",
+                dataType: "json",
+                success: function(data, status) {
+                    //alert(data.productName);
+                    data.forEach(function(key) {
+                        $("#products").append("<option value='" + key["productPrice"] + "'>" + key["productName"] + "</option>");
+                        
+                        //$("#productsListQuantity").html("<input type='number' size='20' id='prodListQuantity' title='" + key["productPrice"] + "'/>");
+                        //prodPriceList.push(key["productPrice"]);
+                        //alert(prodPriceList);
+                    });
+                }
+            }); //AJAX Random product
+            
+            
+        $("#products").on("change", function() {
+              //Product Price
+              prodPrice= $(this).val();
+              $("#prodPrice2").html(prodPrice);
+              prodPrice = parseInt(prodPrice, 10);
+             }); 
+            
+        $("#prodListQuantity").on("change", function() {
+            //Product quantity
+              prodQuantity = parseInt($("#prodListQuantity").val(), 10);
+
+              //Total Product Price
+              totalPrice = prodQuantity * prodPrice;
+              $("#totalPrice2").html(totalPrice);
+              
+              //Total Price After Discount
+              discountedTotal = totalPrice - ((promoDiscount/100) * totalPrice);
+              $("#discountedTotal").html(discountedTotal);
+              
+              //Total Price After Round Off
+              subtotal = Math.trunc(discountedTotal);
+              $("#subtotalValue").html(subtotal); 
+              
+              //Tax
+              tax = (0.1 * subtotal );
+              $("#taxValue").html(tax);
+              
+              //Total Price after tax
+              totalAfterTax = subtotal + tax;
+              $("#totalAfterTax").html(totalAfterTax);
+              
+            }); //Total price computation for Product List
+            
 
         }); //documentReady
     </script>
@@ -42,20 +141,96 @@
         </tr>
         <tr class="table-row">
             <td>
-                <h4 id="productName"></h4>
+                <div id="productName"></div>
             </td>
             <td>
-                <h4 id="productPrice"></h4>
+                <div id="productPrice"></div>
             </td>
             <td>
-                <h4 id="productQuantity"><input type="text" size="20"></h4>
+                <div id="productQuantity"><input type="number" size="20" id="prodQuantity"></div>
             </td>
             <td>
-                <h4 id="totalPrice"></h4>
+                <div id="totalPrice"></div>
+            </td>
+        </tr>
+        <tr class="table-row">
+            <td>
+                <div id="productsList">
+                    <select id="products">
+                        <option>Select One</option>
+                    </select>
+                </div>
+            </td>
+            <td>
+                <div id="prodPrice2"></div>
+            </td>
+            <td>
+               <div id="productsListQuantity"><input type="number" size="20" id="prodListQuantity"/></div>
+            </td>
+            <td>
+                <div id="totalPrice2"></div>
+            </td>
+        </tr>
+        <tr class="table-row">
+            <td>
+                <div id="discount">Discount</div>
+            </td>
+            <td>
+                
+            </td>
+            <td>
+                <div id="discountValue"></div>
+            </td>
+            <td>
+                <div id="discountedTotal"></div>
+            </td>
+        </tr>
+        <tr class="table-row">
+            <td>
+                <div id="subtotal">Subtotal</div>
+            </td>
+             <td>
+                
+            </td>
+            <td>
+                
+            </td>
+            <td>
+                <div id="subtotalValue"></div>
+            </td>
+        </tr>
+        <tr class="table-row">
+            <td>
+                <div id="tax">Tax(10%)</div>
+            </td>
+             <td>
+                
+            </td>
+            <td>
+                
+            </td>
+            <td>
+                <div id="taxValue"></div>
+            </td>
+        </tr>
+        <tr class="table-row">
+            <td>
+                <div id="total">Total</div>
+            </td>
+             <td>
+                
+            </td>
+            <td>
+                
+            </td>
+            <td>
+               <div id= "totalAfterTax"></div> 
             </td>
         </tr>
     </table><br/><br/><br/>
-    <h4>Promo code: <input type="text" id="promoCode"/></h4>
+    <div id ="promoCodeDiv">Promo Code: </div>
+    <div id ="promoExpDateDiv"></div>
+    
 
 </body>
 <footer>

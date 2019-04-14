@@ -1,22 +1,22 @@
-html{
-    background-color: cyan;
-}
-body{
-   text-align: center;    
-   margin: 0 auto; 
+html {
+    background-color: white;
 }
 
-th{
-   width: 30px;
-   height: 30px;
-   margin: 0 auto;
-   border: 2px;
+body {
+   text-align: center;    
+   margin: 0 auto; 
+   height: 1000px;
+   width: 1000px;
+   padding-left: 400px;
+   padding-top: 200px;
 }
-td{
-    width: 30px;
-   height: 30px;
-   margin: 0 auto;
-   border: 2px;
+
+#promoDiv{
+    text-align: center;
+}
+table, th, td {
+  margin: 0 auto;     
+  border: 1px solid black;
 }
 
 #footer_image {
@@ -29,7 +29,7 @@ footer {
     text-align: center;
     position: relative;
     top: 500px;
-    padding-left: 370px;
+    padding-left: 100px;
     font-size: 14px;
     color: black;
 }

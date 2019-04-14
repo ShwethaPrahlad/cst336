@@ -1,0 +1,38 @@
+body{
+   text-align: center; 
+   line-height: 1;
+   margin: 0 0;
+   font-size: 18px; 
+   font-family: 'Open sans', sans-serif;
+   width: 500px;
+   height: 500px;
+   padding-left: 25px;
+   padding-top: 100px;
+   background-color: #1F85DE;
+
+}
+
+.jumbotron{
+    width: 500px;
+    height: 500px;
+}
+
+#formElements{
+    background-color: #60A2DD;
+    opacity: 80;
+}
+
+#footer_image {
+  width: 240px;
+  height: 80px;
+  text-align: center;
+}
+
+footer {
+    text-align: center;
+    position: absolute;
+    top: 3500px;
+    font-size: 14px;
+    color: black;
+    padding-left: 300px;
+}

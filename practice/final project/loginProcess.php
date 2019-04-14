@@ -5,11 +5,11 @@ session_start(); //starts or resumes an existing session
 
 include '../../inc/dbConnection.php';
 
-$conn = getDatabaseConnection("ottermart");
+$conn = getDatabaseConnection("fp_databaseName");
 
 $username = $_POST['username'];
 $password = sha1($_POST['password']);
-$sql = "SELECT * FROM om_admin WHERE username = :username AND password = :password";
+$sql = "SELECT * FROM fp_users WHERE username = :username AND password = :password";
 
 $namedParameters = array();
 $namedParameters[':username'] = $username;
@@ -23,21 +23,13 @@ $record = $stmt->fetch(PDO::FETCH_ASSOC); //we are expecting ONLY one record, so
 
 // print_r($record);
  
- if (!empty($record)) {
+ if (empty($record)) {
+     
+     echo "Username or Password are incorrect!";
+     
+ }
  
-    //echo $record[0]['firstName']; //using fetchAll
-    //echo $record['firstName'] . " " . $record['lastName'] ; //using fetch
-    
-    $_SESSION['adminName'] = $record['firstName'] . " " . $record['lastName'];
-    header('location: admin.php'); //redirecting to a new file
-    
-} 
-
-else{
-
-echo "Username and password do not match";
-header('location: login.php'); 
-
-}
-
-?>
+ else{
+     echo "Welcome " . $username . "!";
+ }
+ ?>

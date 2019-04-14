@@ -1,0 +1,28 @@
+body{
+     text-align: center;
+     padding-top: 40px;
+     margin: 0 auto;
+    }
+h1{
+        text-align: center;
+        height: 50px;
+        padding-bottom: 20px;
+   } 
+   
+#formElements{
+   text-align: center; 
+   margin: 0 auto;
+}
+
+img{
+     border: 0px solid black;
+     border-radius: 20px;
+}
+ #questDiv, #imageDiv{
+   float:left; 
+   text-align: center;
+}
+
+#rubric{
+     padding-top: 200px;
+}
