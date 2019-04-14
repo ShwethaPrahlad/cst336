@@ -38,6 +38,7 @@
     $(document).ready(function() {
                 
             $("#submitButton").on("click", function(){
+                //alert($("#catId").val());
                  $.ajax({
                     type: "GET",
                     url: "api/updateProductAPI.php",
@@ -45,8 +46,8 @@
                     data: {"productId": <?=$_GET['productId']?>,
                            "productName": $("#productName").val(),
                            "productDescription": $("#productDescription").val(),
-                           "productImage": $("#productPrice").val(),
-                           "productPrice": $("#productImage").val(),
+                           "productImage": $("#productImage").val(),
+                           "productPrice": $("#productPrice").val(),
                            "catId": $("#catId").val()
                     },
                     success: function(data, status) {
