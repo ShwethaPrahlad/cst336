@@ -1,7 +1,3 @@
-<?php
-
-
-?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,47 +7,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    
-  <!-- <script>
-    $(document).ready(function(){
+        <style>
+           #errorMessage{
+               color:red;
+           }
+    </style> 
+    <script>
+            
+             $(document).ready(function(){  
+                let URL = window.location.href.split("=")[1];
+                if(URL === 'True'){
+                    $("#errorMessage").html("Username and Password do not match!");
+                }
+             });
         
-            
-      $("#submitButton").on("click", function(){
-         
-          
-            var user = $("[name=username]").val();
-            var pwd = $("[name=password]").val();
-            var url= $("#formElements").attr("action").val();
-            //alert(url);
-            
-            //alert(user);
-            //alert(pwd);
-            //var newUrl = "loginProcess.php?username=" +user+"&password=" +pwd;
-            //alert(newUrl);
-               
-                $.ajax({
-                    type: "POST",
-                    url: "loginProcess.php",
-                    dataType: "json",
-                    data: { "username": user,
-                            "password": pwd
-                    },
-                     success: function(data, status) {
-                     // alert(data);
-                      if (data === "false"){
-                          $("#errorMessage").html("Username or Password are incorrect!"); 
-                      }  
-                     }
-                     
-                }); //ajax    
-            
-        }); //submit button
-      
-           
-    });   // document ready
-        
-    </script> -->
-  </head>
+    </script> 
+    </head>
     <body>
         <form method="POST" action="loginProcess.php" id="formElements" class="jumbotron">
             

@@ -35,8 +35,7 @@ $record = $stmt->fetch(PDO::FETCH_ASSOC); //we are expecting ONLY one record, so
 
 else{
 
-echo "Username and password do not match";
-header('location: login.php'); 
+header('location: login.php?LoginError=True');
 
 }
 
