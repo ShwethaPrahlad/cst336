@@ -11,11 +11,10 @@ body {
    background-color: #5A4124;
    background-image: linear-gradient(#DAB177, #5A4124);
    width: 1000px;
-   height: 2000px;
-   margin: 0 auto;
+   height: 5000px;
    font-size: 18px; 
    font-family: 'Open sans', sans-serif;
-   padding: 200px;
+   margin: 0px auto;
 }
 
 .row1, .row2{
