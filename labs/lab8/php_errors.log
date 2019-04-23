@@ -1,0 +1,180 @@
+[19-Apr-2019 00:09:46 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 35
+[19-Apr-2019 00:09:46 UTC] PHP Stack trace:
+[19-Apr-2019 00:09:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:0
+[19-Apr-2019 00:11:08 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 35
+[19-Apr-2019 00:11:08 UTC] PHP Stack trace:
+[19-Apr-2019 00:11:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:0
+[19-Apr-2019 00:11:10 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 35
+[19-Apr-2019 00:11:10 UTC] PHP Stack trace:
+[19-Apr-2019 00:11:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:0
+[19-Apr-2019 00:12:28 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'lab8_pixabay'' in /home/ubuntu/workspace/cst336/inc/dbConnection.php:18
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/inc/dbConnection.php(18): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(4): getDatabaseConnection('lab8_pixabay')
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336/inc/dbConnection.php on line 18
+[19-Apr-2019 00:13:26 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:39
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(39): PDOStatement->execute(NULL)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 39
+[19-Apr-2019 00:14:33 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:39
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(39): PDOStatement->execute(NULL)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 39
+[19-Apr-2019 00:14:59 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:39
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(39): PDOStatement->execute(NULL)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 39
+[19-Apr-2019 00:15:39 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:41
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(41): PDOStatement->execute(NULL)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 41
+[19-Apr-2019 00:16:19 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:41
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(41): PDOStatement->execute(NULL)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 41
+[19-Apr-2019 00:17:12 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:43
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(43): PDOStatement->execute(NULL)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 43
+[19-Apr-2019 00:17:18 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:43
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(43): PDOStatement->execute(NULL)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 43
+[19-Apr-2019 00:21:04 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:41
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(41): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 41
+[19-Apr-2019 00:21:07 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:41
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(41): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 41
+[19-Apr-2019 00:21:17 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:41
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(41): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 41
+[19-Apr-2019 00:22:31 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:41
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(41): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 41
+[19-Apr-2019 00:23:32 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:41
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(41): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 41
+[19-Apr-2019 00:23:35 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:41
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(41): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 41
+[19-Apr-2019 00:23:35 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:41
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(41): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 41
+[19-Apr-2019 00:23:36 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:41
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(41): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 41
+[19-Apr-2019 00:23:36 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:41
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(41): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 41
+[19-Apr-2019 00:23:48 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:41
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(41): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 41
+[19-Apr-2019 00:23:51 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:41
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(41): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 41
+[19-Apr-2019 00:25:35 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:41
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(41): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 41
+[19-Apr-2019 00:26:26 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:41
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(41): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 41
+[19-Apr-2019 00:29:58 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:41
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(41): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 41
+[19-Apr-2019 00:31:14 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'url' in 'where clause'' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:42
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(42): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 42
+[19-Apr-2019 00:33:36 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:42
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(42): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 42
+[19-Apr-2019 00:33:37 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:42
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(42): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 42
+[19-Apr-2019 00:34:28 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:42
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(42): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 42
+[19-Apr-2019 00:34:29 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:42
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(42): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 42
+[19-Apr-2019 00:34:30 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:42
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(42): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 42
+[19-Apr-2019 00:34:31 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:42
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(42): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 42
+[19-Apr-2019 00:34:33 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:42
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(42): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 42
+[19-Apr-2019 00:38:25 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'imageURL' cannot be null' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:42
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(42): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 42
+[19-Apr-2019 00:38:27 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'imageURL' cannot be null' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:42
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(42): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 42
+[19-Apr-2019 00:38:28 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'imageURL' cannot be null' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:42
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(42): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 42
+[19-Apr-2019 00:38:29 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'imageURL' cannot be null' in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php:42
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php(42): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab8/api/favoritesAPI.php on line 42
