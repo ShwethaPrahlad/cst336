@@ -1,11 +1,23 @@
+html{
+      background-image: url('../img/globe.jpg');
+}
 
+.jumbotron {
+                text-align: center; 
+            }
+            
 body {
-   text-align: center;
+   text-align: center; 
+   background-color: #5A4124;
+   background-image: linear-gradient(#DAB177, #5A4124);
+   width: 1000px;
+   height: 2000px;
+   margin: 0 auto;
+   font-size: 18px; 
+   font-family: 'Open sans', sans-serif;
+   padding: 200px;
 }
-.jumbotron{
-    
-    text-align: center;
-}
+
 .row1, .row2{
     display: flex;
     margin: 2px auto;
@@ -41,7 +53,7 @@ body {
     position: absolute;
     text-align: center;
     margin: 0 auto;
-    padding-left: 470px;
+    padding-left: 100px;
 }
 
 #searchCount{
