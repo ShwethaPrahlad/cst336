@@ -1,0 +1,60 @@
+body {
+text-align: center;
+background-image: url('../img/beach.jpg');
+font-family: 'Open Sans', sans-serif; 
+color: #004d4d;
+}
+
+img {
+    border-radius: 20px;
+    padding:15px;
+}
+
+.favorite{
+    cursor: pointer;
+}
+
+#keywordDisplay{
+  padding-left: 25px;
+  font-size: 20pt;
+}
+
+#favoritesButton, #searchBtn{
+    font-family: 'Open Sans', sans-serif; 
+    background-color: #b2fffb;
+    border-radius: 10px;
+    width: 120px;
+    height: 50px;
+    font-size: 20px;
+    color: #004d4d;
+}
+
+h1{
+   font-size: 30px; 
+}
+
+#keyword, h3, a{
+  font-size: 25px; 
+  font-family: 'Open Sans', sans-serif; 
+  color: #004d4d;
+}
+
+#footer_image {
+  width: 240px;
+  height: 80px;
+  text-align: center;
+}
+
+footer {
+    position: absolute;
+    top: 1500px;
+    padding-left: 400px;
+    padding-bottom: 20px
+}
+
+/*#badge, #logo {
+  float: left;
+  padding-left: 460px;
+  text-align: center;
+}*/
+

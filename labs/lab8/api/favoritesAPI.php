@@ -31,6 +31,16 @@
           
                  break;
                  
+     case "keyword": // displays unique keywords (hint: use DISTINCT)
+      $sql = "SELECT DISTINCT keyword FROM `lab8_pixabay`";
+                     break;
+                     
+                     
+     case "favorites":  //display images based on favorites
+     $sql = "SELECT imageURL FROM `lab8_pixabay` WHERE keyword = :keyword";
+              $arr[":keyword"] = $_GET['keyword'];           
+                        break;
+                 
   }//switch
   
  
@@ -38,7 +48,16 @@
     $stmt = $conn->prepare($sql);
     $stmt->execute($arr);
     
-    //$records = $stmt->fetch(PDO::FETCH_ASSOC);
-    //echo json_encode($records);
+    if ($action == "keyword")
+    {
+      $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
+      echo json_encode($records);
+    }
+    
+    if ($action == "favorites")
+    {
+      $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
+      echo json_encode($records);  
+    }
 
 ?>
