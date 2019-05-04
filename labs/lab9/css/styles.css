@@ -1,0 +1,18 @@
+body {
+text-align: center;
+background-image: url('../img/fileCabinet.jpg');
+font-family: 'Open Sans', sans-serif; 
+color: #6F5B49;
+}
+
+img {
+    padding: 10px;
+
+}
+
+img:hover {
+    width: 250px;
+
+}
+
+
