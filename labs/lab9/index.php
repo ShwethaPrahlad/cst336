@@ -6,14 +6,8 @@
     
     echo "Image size: " . $_FILES['myFile']['size']; 
     echo "<br>";
-    
-    if ($_FILES['myFile']['size'] <= 0){
-     
-    echo "Sorry! Cannot upload the image as the image size could not be determined.";    
-    echo "<br>";
-    
-    }
-    else if (($_FILES['myFile']['size'] > 0) && ($_FILES['myFile']['size'] < 1000000)) {
+
+    if (($_FILES['myFile']['size'] > 0) && ($_FILES['myFile']['size'] < 1000000)) {
     
     move_uploaded_file( $_FILES['myFile']['tmp_name'], "gallery/" . $_FILES['myFile']['name']);
     
@@ -24,12 +18,12 @@
     
     else {
         
-        echo "Sorry! Cannot upload the image as the image size is larger than 1 MB";
+        echo "Sorry! Cannot upload the image as the image size is larger than 1 MB or the image size could not be determined";
         echo "<br>";
+        
     }
 
 }
-
 
     function displayImagesUploaded() {
 
@@ -71,4 +65,15 @@
         <?= displayImagesUploaded() ?>
         
     </body>
+     <footer>
+            <br/><br/><br/><br/><br/>
+            &copy;&nbsp;2019 Shwetha Prahlad, CST 336 Internet Programming.<br/>
+            Disclaimer: The content on this web page is fictitious. It represents information only for academic purposes.<br/> <br/>
+            <div id = "logo">
+               <img src = "../../images/CSUMB_Logo.png" id = "footer_image" alt= "CSUMB Logo with the name and an otter"/>
+            </div>
+            <div id = "badge">
+               <img src = "../../images/buddy_verified.png" id = "buddy_badge"/>
+            </div>
+        </footer>
 </html>

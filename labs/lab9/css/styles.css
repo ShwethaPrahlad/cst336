@@ -15,4 +15,17 @@ img:hover {
 
 }
 
+#footer_image {
+  width: 240px;
+  height: 80px;
+  text-align: center;
+}
+
+footer {
+    position: absolute;
+    top: 800px;
+    padding-left: 400px;
+    padding-bottom: 20px
+}
+
 
