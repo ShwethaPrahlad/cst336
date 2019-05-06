@@ -7,7 +7,7 @@
     echo "Image size: " . $_FILES['myFile']['size']; 
     echo "<br>";
 
-    if (($_FILES['myFile']['size'] > 0) && ($_FILES['myFile']['size'] < 1000000)) {
+    if (($_FILES['myFile']['size'] > 0) && ($_FILES['myFile']['size'] < 1048576)) {
     
     move_uploaded_file( $_FILES['myFile']['tmp_name'], "gallery/" . $_FILES['myFile']['name']);
     
