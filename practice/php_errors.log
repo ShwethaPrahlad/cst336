@@ -1,0 +1,6 @@
+[07-May-2019 23:42:27 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'final_practice'' in /home/ubuntu/workspace/cst336/inc/dbConnection.php:18
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/inc/dbConnection.php(18): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/cst336/practice/final/index.php(4): getDatabaseConnection('final_practice')
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336/inc/dbConnection.php on line 18
