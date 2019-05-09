@@ -101,7 +101,7 @@
     </head>
     <body>
 
-        <h1> Ottermart - Admin Section </h1>
+        <h1> Spice Basket - Admin Section </h1>
 
         Welcome <?=$_SESSION['adminName']?>
         
